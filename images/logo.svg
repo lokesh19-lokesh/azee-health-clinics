@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" width="460" height="90" fill="none">
+  <!-- Symbol Icon: Geometric Precision Cross & Wellness Leaf Emblem -->
+  <g transform="translate(10, 10)">
+    <!-- Soft circular emblem background -->
+    <rect x="0" y="0" width="70" height="70" rx="18" fill="#F7F5EF" stroke="#DDE4D5" stroke-width="2"/>
+    <!-- Navy precision clinic cross -->
+    <path d="M35 15 V55 M15 35 H55" stroke="#0B3B63" stroke-width="7" stroke-linecap="round"/>
+    <!-- Sage green organic wellness arc / leaf accent -->
+    <path d="M22 48 C26 30 46 24 53 21 C51 38 38 52 22 48 Z" fill="#6B7655" opacity="0.9"/>
+    <!-- Warm gold focal center point representing precision -->
+    <circle cx="35" cy="35" r="4.5" fill="#C7A86B"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(94, 20)">
+    <!-- Brand Name -->
+    <text x="0" y="32" font-family="'Manrope', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.5">
+      <tspan fill="#6B7655">Azee</tspan><tspan fill="#0B3B63">Health</tspan>
+      <tspan dx="8" font-size="20" font-weight="600" fill="#145A8D" letter-spacing="1.5">CLINICS</tspan>
+    </text>
+    
+    <!-- Accent Line -->
+    <line x1="0" y1="42" x2="330" y2="42" stroke="#6B7655" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    <circle cx="165" cy="42" r="2" fill="#C7A86B"/>
+    
+    <!-- Tagline -->
+    <text x="0" y="55" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#082C4A" letter-spacing="3.2">
+      PRECISION  |  CARE  |  WELL BEING
+    </text>
+  </g>
+</svg>
