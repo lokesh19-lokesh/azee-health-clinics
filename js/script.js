@@ -109,11 +109,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, {
       root: null,
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.05,
+      rootMargin: '0px 0px 50px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // Immediate check for elements already near viewport
+    setTimeout(() => {
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) + 50) {
+          el.classList.add('active');
+        }
+      });
+    }, 50);
   } else {
     // Fallback if IntersectionObserver not supported
     revealElements.forEach(el => el.classList.add('active'));
