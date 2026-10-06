@@ -907,6 +907,190 @@ header,
   margin-bottom: 1.25rem;
 }
 
+/* --------------------------------------------------------------------------
+   8. Clinical Departments Bento Grid
+   -------------------------------------------------------------------------- */
+.dept-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 1.5rem;
+}
+
+.dept-card {
+  border-radius: 20px;
+  padding: 2.25rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  text-decoration: none;
+  min-height: 205px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.dept-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.dept-card-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  min-width: 0;
+}
+
+.dept-title {
+  font-family: var(--font-heading);
+  font-size: 1.42rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.dept-conditions {
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+  opacity: 0.92;
+}
+
+.dept-link {
+  font-family: var(--font-heading);
+  font-size: 0.94rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: gap var(--transition-fast), transform var(--transition-fast);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dept-card:hover .dept-link {
+  gap: 0.65rem;
+}
+
+.dept-card-icon {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform var(--transition-normal);
+}
+
+.dept-card:hover .dept-card-icon {
+  transform: scale(1.06);
+}
+
+.dept-illustration {
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* 24-Column Bento Spans for Desktop */
+.dept-span-12 { grid-column: span 12; }
+.dept-span-10 { grid-column: span 10; }
+.dept-span-7  { grid-column: span 7; }
+
+/* Department Color Variations matching the uploaded reference */
+/* 1. Proctology - Lilac / Purple */
+.dept-card-proctology {
+  background-color: #E8D2F8;
+  color: #271442;
+}
+.dept-card-proctology .dept-title { color: #271442; }
+.dept-card-proctology .dept-conditions { color: #4F356B; }
+.dept-card-proctology .dept-link { color: #271442; }
+.dept-card-proctology .dept-illustration { stroke: #271442; }
+
+/* 2. General and Laparoscopic - Soft Periwinkle Violet */
+.dept-card-laparoscopic {
+  background-color: #B8ACF6;
+  color: #1A1448;
+}
+.dept-card-laparoscopic .dept-title { color: #1A1448; }
+.dept-card-laparoscopic .dept-conditions { color: #352B6D; }
+.dept-card-laparoscopic .dept-link { color: #1A1448; }
+.dept-card-laparoscopic .dept-illustration { stroke: #1A1448; }
+
+/* 3. Bariatric & Surgical Gastro - Soft Sky Blue */
+.dept-card-gastro {
+  background-color: #CBE4FA;
+  color: #0C2849;
+}
+.dept-card-gastro .dept-title { color: #0C2849; }
+.dept-card-gastro .dept-conditions { color: #1E4675; }
+.dept-card-gastro .dept-link { color: #0C2849; }
+.dept-card-gastro .dept-illustration { stroke: #0C2849; }
+
+/* 4. ENT - Soft Warm Terracotta Peach */
+.dept-card-ent {
+  background-color: #EFA277;
+  color: #3C1204;
+}
+.dept-card-ent .dept-title { color: #3C1204; }
+.dept-card-ent .dept-conditions { color: #6D2B0E; }
+.dept-card-ent .dept-link { color: #3C1204; }
+.dept-card-ent .dept-illustration { stroke: #3C1204; }
+
+/* 5. Urology - Soft Cyan/Teal Blue */
+.dept-card-urology {
+  background-color: #82C7E8;
+  color: #072F40;
+}
+.dept-card-urology .dept-title { color: #072F40; }
+.dept-card-urology .dept-conditions { color: #104C67; }
+.dept-card-urology .dept-link { color: #072F40; }
+.dept-card-urology .dept-illustration { stroke: #072F40; }
+
+/* 6. Gynaecology - Soft Pastel Mint */
+.dept-card-gynaecology {
+  background-color: #A3DABF;
+  color: #053E2F;
+}
+.dept-card-gynaecology .dept-title { color: #053E2F; }
+.dept-card-gynaecology .dept-conditions { color: #0B5B45; }
+.dept-card-gynaecology .dept-link { color: #053E2F; }
+.dept-card-gynaecology .dept-illustration { stroke: #053E2F; }
+
+/* 7. Orthopaedics - Soft Warm Sunny Gold */
+.dept-card-orthopaedics {
+  background-color: #EED46B;
+  color: #3B2103;
+}
+.dept-card-orthopaedics .dept-title { color: #3B2103; }
+.dept-card-orthopaedics .dept-conditions { color: #69410A; }
+.dept-card-orthopaedics .dept-link { color: #3B2103; }
+.dept-card-orthopaedics .dept-illustration { stroke: #3B2103; }
+
+/* 8. Plastic & Cosmetic Surgery - Soft Seafoam Sage */
+.dept-card-cosmetic {
+  background-color: #9FD4BC;
+  color: #053C2D;
+}
+.dept-card-cosmetic .dept-title { color: #053C2D; }
+.dept-card-cosmetic .dept-conditions { color: #0C5841; }
+.dept-card-cosmetic .dept-link { color: #053C2D; }
+.dept-card-cosmetic .dept-illustration { stroke: #053C2D; }
+
 /* Doctor Cards */
 .doctor-card {
   background-color: var(--color-white);
@@ -1685,5 +1869,103 @@ header,
 
   .custom-card {
     padding: 1.35rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Department Bento Grid Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .dept-card {
+    padding: 1.85rem 1.65rem;
+    min-height: 195px;
+  }
+  .dept-title {
+    font-size: 1.28rem;
+  }
+  .dept-card-icon {
+    flex: 0 0 85px;
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dept-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .dept-span-12,
+  .dept-span-10,
+  .dept-span-7 {
+    grid-column: span 1;
+  }
+  .dept-card {
+    min-height: auto;
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dept-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .dept-span-12,
+  .dept-span-10,
+  .dept-span-7 {
+    grid-column: span 1;
+  }
+  .dept-card {
+    padding: 1.45rem 1.25rem;
+    align-items: center;
+    border-radius: 16px;
+  }
+  .dept-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.45rem;
+  }
+  .dept-conditions {
+    font-size: 0.88rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.4;
+  }
+  .dept-card-icon {
+    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
+  }
+  .back-to-top-btn {
+    bottom: 74px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    box-shadow: 0 4px 14px rgba(8, 44, 74, 0.22);
+  }
+}
+
+@media (max-width: 480px) {
+  .dept-card {
+    padding: 1.25rem 1rem;
+    gap: 0.85rem;
+  }
+  .dept-title {
+    font-size: 1.12rem;
+  }
+  .dept-conditions {
+    font-size: 0.82rem;
+  }
+  .dept-card-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+  }
+  .back-to-top-btn {
+    bottom: 72px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    font-size: 0.92rem;
   }
 }
