@@ -68,6 +68,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -77,7 +82,6 @@ body {
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -394,12 +398,18 @@ img {
   vertical-align: middle;
 }
 
-.navbar-custom {
-  background-color: var(--color-white);
-  padding: 0.65rem 0;
+header,
+.site-header {
   position: sticky;
   top: 0;
   z-index: 1030;
+  width: 100%;
+}
+
+.navbar-custom {
+  background-color: var(--color-white);
+  padding: 0.75rem 0;
+  width: 100%;
   transition: all var(--transition-normal);
   border-bottom: 1px solid var(--color-border);
 }
@@ -412,7 +422,7 @@ img {
 }
 
 .navbar-custom.scrolled {
-  padding: 0.45rem 0;
+  padding: 0.5rem 0;
   box-shadow: var(--shadow-navbar);
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
@@ -428,9 +438,9 @@ img {
 }
 
 .navbar-logo-img {
-  height: 48px;
+  height: 62px;
   width: auto;
-  max-width: 190px;
+  max-width: 250px;
   object-fit: contain;
   display: block;
   transition: all var(--transition-normal);
@@ -441,13 +451,13 @@ img {
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 40px;
-  max-width: 165px;
+  height: 52px;
+  max-width: 215px;
 }
 
 .footer-logo-bg {
   background-color: var(--color-white);
-  padding: 8px 16px;
+  padding: 10px 22px;
   border-radius: var(--radius-sm);
   display: inline-block;
   margin-bottom: 1.25rem;
@@ -461,9 +471,9 @@ img {
 }
 
 .footer-logo-img {
-  height: 42px;
+  height: 54px;
   width: auto;
-  max-width: 190px;
+  max-width: 230px;
   object-fit: contain;
   display: block;
 }
@@ -1601,6 +1611,11 @@ img {
     flex-wrap: wrap;
   }
 
+  .navbar-logo-img {
+    height: 52px;
+    max-width: 210px;
+  }
+
   .navbar-toggler {
     display: inline-flex !important;
     align-items: center;
@@ -1646,8 +1661,8 @@ img {
 
 @media (max-width: 575.98px) {
   .navbar-logo-img {
-    height: 36px;
-    max-width: 140px;
+    height: 44px;
+    max-width: 175px;
   }
 
   .navbar-toggler {

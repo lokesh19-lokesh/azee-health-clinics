@@ -40,22 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   // 3. Sticky Navbar & Background Change on Scroll
   // ------------------------------------------------------------------------
+  const header = document.querySelector('.site-header') || document.querySelector('header');
   const navbar = document.querySelector('.navbar-custom');
   const backToTopBtn = document.getElementById('backToTopBtn');
 
   const handleScroll = () => {
-    const scrollY = window.scrollY;
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
 
     if (navbar) {
-      if (scrollY > 40) {
+      if (scrollY > 20) {
         navbar.classList.add('scrolled');
+        if (header) header.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
+        if (header) header.classList.remove('scrolled');
       }
     }
 
     if (backToTopBtn) {
-      if (scrollY > 350) {
+      if (scrollY > 300) {
         backToTopBtn.classList.add('visible');
       } else {
         backToTopBtn.classList.remove('visible');
