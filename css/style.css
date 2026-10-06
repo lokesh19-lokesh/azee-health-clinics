@@ -689,6 +689,22 @@ header,
   50% { transform: translateY(-8px); }
 }
 
+.floating-hero-card.floating-card-top {
+  position: absolute;
+  top: 24px;
+  right: -20px;
+  left: auto;
+  bottom: auto;
+  z-index: 5;
+}
+
+.floating-hero-card.floating-card-bottom {
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  z-index: 5;
+}
+
 .floating-card-icon {
   width: 48px;
   height: 48px;
@@ -700,6 +716,14 @@ header,
   justify-content: center;
   font-size: 1.4rem;
   flex-shrink: 0;
+}
+
+.bg-teal-subtle {
+  background-color: #E2F5F3 !important;
+}
+
+.text-teal {
+  color: var(--color-teal) !important;
 }
 
 .floating-card-title {
@@ -715,6 +739,101 @@ header,
   color: var(--color-muted-text);
   margin: 0;
   line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   Hero 3D Medical Stage
+   -------------------------------------------------------------------------- */
+.hero-3d-showcase-col {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-3d-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: radial-gradient(circle at 50% 45%, #FFFFFF 0%, #F3F8F6 55%, #E5F0EC 100%);
+  border: 1.5px solid rgba(10, 143, 130, 0.2);
+  border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(8, 44, 74, 0.09), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-tag-badge {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(10, 143, 130, 0.22);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-navy);
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.stage-tag-badge .live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(10, 143, 130, 0.25);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(10, 143, 130, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(10, 143, 130, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(10, 143, 130, 0); }
+}
+
+.hero-canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: grab;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.hero-canvas-container:active {
+  cursor: grabbing;
+}
+
+#heroThreeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+}
+
+.stage-interaction-hint {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-muted-text);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  z-index: 5;
+  pointer-events: none;
 }
 
 /* Inner Page Hero */
@@ -1969,3 +2088,89 @@ header,
     font-size: 0.92rem;
   }
 }
+
+/* --------------------------------------------------------------------------
+   16. Three.js 3D Canvas & GSAP Animation Enhancements
+   -------------------------------------------------------------------------- */
+.hero-canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: grab;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.hero-canvas-container:active {
+  cursor: grabbing;
+}
+
+#heroThreeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+}
+
+/* When GSAP is active, delegate transitions to GSAP engine to prevent CSS lag */
+body.has-gsap .reveal-fade-up {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .hero-3d-stage {
+    height: 420px;
+    border-radius: 24px;
+    margin-top: 1rem;
+  }
+  .hero-canvas-container {
+    border-radius: 24px;
+  }
+  .floating-hero-card.floating-card-top {
+    right: 12px;
+    top: 12px;
+    max-width: 260px;
+    padding: 0.8rem 1rem;
+  }
+  .floating-hero-card.floating-card-bottom {
+    left: 12px;
+    bottom: 12px;
+    max-width: 260px;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-3d-stage {
+    height: 350px;
+    border-radius: 20px;
+  }
+  .hero-canvas-container {
+    border-radius: 20px;
+  }
+  .stage-tag-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+  .floating-hero-card.floating-card-top {
+    display: none;
+  }
+  .floating-hero-card.floating-card-bottom {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    max-width: calc(100% - 20px);
+    padding: 0.7rem 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+  .stage-interaction-hint {
+    display: none;
+  }
+}
+

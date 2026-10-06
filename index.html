@@ -157,10 +157,10 @@
          SECTION 1 — HERO
          ---------------------------------------------------------------------- -->
     <section class="hero-home" id="heroHomeSection">
-      <div class="container">
+      <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center gy-5">
           <!-- Left Content -->
-          <div class="col-lg-6 hero-content reveal-fade-up">
+          <div class="col-lg-6 hero-content">
             <div class="section-eyebrow">
               <span class="section-eyebrow-dot"></span>
               WELCOME TO AZEEHEALTH CLINICS
@@ -186,6 +186,19 @@
               </a>
             </div>
 
+            <!-- Quick Clinical Highlights -->
+            <div class="hero-highlights-list d-flex flex-wrap gap-2 mb-4">
+              <span class="badge bg-white text-navy border py-2 px-3 fw-semibold rounded-pill shadow-xs">
+                <i class="bi bi-check2-circle text-sage me-1"></i> NABH Standards
+              </span>
+              <span class="badge bg-white text-navy border py-2 px-3 fw-semibold rounded-pill shadow-xs">
+                <i class="bi bi-clock-history text-sage me-1"></i> Zero Wait-Time Care
+              </span>
+              <span class="badge bg-white text-navy border py-2 px-3 fw-semibold rounded-pill shadow-xs">
+                <i class="bi bi-shield-check text-sage me-1"></i> Daycare Surgery
+              </span>
+            </div>
+
             <!-- Trust Statement -->
             <div class="hero-trust-badge">
               <i class="bi bi-shield-fill-check trust-icon"></i>
@@ -193,20 +206,45 @@
             </div>
           </div>
 
-          <!-- Right Visual Media & Floating Card -->
-          <div class="col-lg-6 hero-media-wrapper reveal-fade-up delay-200">
-            <div class="hero-image-frame">
-              <img src="images/hero.jpg" alt="AzeeHealth physician consulting with patient in modern clinic suite" width="600" height="480" fetchpriority="high">
-            </div>
-
-            <!-- Floating Info Card -->
-            <div class="floating-hero-card" id="floatingHeroCard">
-              <div class="floating-card-icon" aria-hidden="true">
-                <i class="bi bi-heart-pulse"></i>
+          <!-- Right: Interactive 3D Medical Stage (Replaces static image) -->
+          <div class="col-lg-6 hero-3d-showcase-col">
+            <div class="hero-3d-stage" id="hero3dStage" role="region" aria-label="Interactive 3D Medical Matrix Model">
+              <!-- Live 3D Scene Badge -->
+              <div class="stage-tag-badge">
+                <span class="live-dot"></span>
+                <span>INTERACTIVE 3D BIO-CELLULAR MATRIX</span>
               </div>
-              <div>
-                <div class="floating-card-title">Patient-Centered Care</div>
-                <p class="floating-card-text">Professional medical support at every step.</p>
+
+              <!-- Interactive Three.js Canvas -->
+              <div class="hero-canvas-container" id="heroCanvasContainer">
+                <canvas id="heroThreeCanvas"></canvas>
+              </div>
+
+              <!-- Floating Info Card 1: Patient-Centered Care -->
+              <div class="floating-hero-card floating-card-top" id="floatingHeroCardTop">
+                <div class="floating-card-icon" aria-hidden="true">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+                <div>
+                  <div class="floating-card-title">Patient-Centered Care</div>
+                  <p class="floating-card-text">Specialist medical support at every step.</p>
+                </div>
+              </div>
+
+              <!-- Floating Info Card 2: Precision Diagnostics -->
+              <div class="floating-hero-card floating-card-bottom" id="floatingHeroCardBottom">
+                <div class="floating-card-icon bg-teal-subtle text-teal" aria-hidden="true">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <div>
+                  <div class="floating-card-title">Precision Diagnostics</div>
+                  <p class="floating-card-text">Minimally invasive modern therapies.</p>
+                </div>
+              </div>
+
+              <!-- Interaction Hint -->
+              <div class="stage-interaction-hint" aria-hidden="true">
+                <i class="bi bi-arrows-move me-1"></i> Drag or swipe to rotate 3D model
               </div>
             </div>
           </div>
@@ -1293,8 +1331,18 @@
 
   <!-- Bootstrap 5.3.3 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
-  <!-- Custom Application Script -->
+
+  <!-- Three.js (r128) 3D Graphics Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP & ScrollTrigger Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Core Application Script -->
   <script src="js/script.js"></script>
+
+  <!-- GSAP & Three.js Animation Controller -->
+  <script src="js/index-animations.js"></script>
 </body>
 </html>
