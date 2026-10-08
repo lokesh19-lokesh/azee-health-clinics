@@ -440,28 +440,28 @@ header,
 }
 
 .navbar-logo-img {
-  height: 56px;
+  height: 72px;
   width: auto;
-  max-width: 250px;
+  max-width: 300px;
   object-fit: contain;
   display: block;
   background-color: #FFFFFF;
-  padding: 5px 14px;
+  padding: 6px 18px;
   border-radius: var(--radius-sm);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all var(--transition-normal);
 }
 
 .brand-wrapper:hover .navbar-logo-img {
   transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 48px;
-  max-width: 215px;
-  padding: 4px 12px;
+  height: 58px;
+  max-width: 245px;
+  padding: 5px 14px;
 }
 
 .footer-logo-bg {
@@ -2249,8 +2249,9 @@ header,
   }
 
   .navbar-logo-img {
-    height: 52px;
-    max-width: 210px;
+    height: 60px;
+    max-width: 250px;
+    padding: 5px 14px;
   }
 
   .navbar-toggler {
@@ -2298,8 +2299,9 @@ header,
 
 @media (max-width: 575.98px) {
   .navbar-logo-img {
-    height: 44px;
-    max-width: 175px;
+    height: 50px;
+    max-width: 205px;
+    padding: 4px 10px;
   }
 
   .navbar-toggler {
