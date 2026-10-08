@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insights & Medical Blog | AzeeHealth Clinics Hyderabad</title>
+  <meta name="description"
+    content="Explore expert clinical articles, minimally invasive surgery recovery guides, preventive health checkup tips, and wellness insights from AzeeHealth Clinics specialists in Hyderabad.">
+  <meta name="keywords"
+    content="AzeeHealth blog, medical articles Hyderabad, laparoscopic surgery advice, preventive healthcare tips, doctor health guides, daycare clinic blog">
+  <meta name="author" content="AzeeHealth Clinics">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Health Insights & Medical Blog | AzeeHealth Clinics">
+  <meta property="og:description"
+    content="Doctor-curated medical articles, daycare surgery insights, and preventive wellness advice from AzeeHealth Clinics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://azeehealthclinics.com/blog.html">
+  <meta property="og:image" content="images/clinic/facility-reception.jpg">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet with Cache Busting -->
+  <link rel="stylesheet" href="css/style.css?v=2.2">
+
+  <!-- Structured Data: MedicalWebPage & Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AzeeHealth Clinics Insights",
+    "description": "Medical articles and patient wellness guides from AzeeHealth Clinics",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "AzeeHealth Clinics",
+      "logo": "https://azeehealthclinics.com/images/logo.png"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       TOP UTILITY BAR
+       ======================================================================== -->
+  <div class="top-bar d-none d-md-block" id="topUtilityBar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-sage me-1"></i> Road No. xx, Xxxx XXx, Hyderabad</span>
+        <span class="top-bar-divider"></span>
+        <span><i class="bi bi-clock-fill text-sage me-1"></i> Mon – Sat: 9:00 AM – 7:00 PM</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:+918309432284"><i class="bi bi-telephone-fill text-sage me-1"></i> +91 8309432284</a>
+        <span class="top-bar-divider"></span>
+        <a href="mailto:care@azeehealthclinics.com"><i class="bi bi-envelope-fill text-sage me-1"></i>
+          care@azeehealthclinics.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL HEADER & STICKY NAVBAR
+       ======================================================================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom" id="mainNavbar" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Brand Wordmark / Official Logo -->
+        <a class="navbar-brand brand-wrapper" href="index.html" aria-label="AzeeHealth Clinics Home">
+          <img src="images/logo.png" alt="AzeeHealth Clinics - Precision | Care | Well Being" class="navbar-logo-img"
+            width="260" height="75">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainMenu"
+          aria-controls="navbarMainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-white"></i>
+        </button>
+
+        <!-- Navbar Links & Right CTA Actions -->
+        <div class="collapse navbar-collapse" id="navbarMainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <div class="nav-actions ms-lg-4">
+            <a href="tel:+918309432284" class="btn-nav-call" aria-label="Call clinic now">
+              <i class="bi bi-telephone-outbound text-sage"></i>
+              <span>Call Now</span>
+            </a>
+            <button type="button" class="btn btn-primary-navy btn-sm" data-bs-toggle="modal"
+              data-bs-target="#appointmentModal">
+              <i class="bi bi-calendar2-check"></i>
+              <span>Book Appointment</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       PAGE HERO
+       ======================================================================== -->
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb" class="breadcrumb-custom">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Health Insights &amp; Blog</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="page-hero-title">Clinical Insights &amp; Health Guides</h1>
+          <p class="page-hero-subtitle">
+            Evidence-based medical perspectives, surgical recovery guidance, and preventive health insights curated by AzeeHealth clinical specialists.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN BLOG SECTION WITH LIVE FILTER & SEARCH
+       ======================================================================== -->
+  <section class="py-5" id="blogSection">
+    <div class="container">
+
+      <!-- Blog Filter & Live Search Toolbar -->
+      <div class="blog-filter-bar">
+        <div class="blog-category-nav" role="tablist" aria-label="Filter articles by category">
+          <button type="button" class="blog-category-btn active" data-category="all">
+            <i class="bi bi-grid-fill me-1"></i> All Insights
+          </button>
+          <button type="button" class="blog-category-btn" data-category="surgery">
+            <i class="bi bi-hospital me-1"></i> Daycare &amp; Surgery
+          </button>
+          <button type="button" class="blog-category-btn" data-category="preventive">
+            <i class="bi bi-shield-check me-1"></i> Preventive Health
+          </button>
+          <button type="button" class="blog-category-btn" data-category="wellness">
+            <i class="bi bi-heart-pulse me-1"></i> Wellness &amp; Lifestyle
+          </button>
+          <button type="button" class="blog-category-btn" data-category="pharmacy">
+            <i class="bi bi-capsule me-1"></i> Pharmacy &amp; Meds
+          </button>
+        </div>
+
+        <div class="blog-search-wrap">
+          <i class="bi bi-search"></i>
+          <input type="text" class="blog-search-input" id="blogSearchInput"
+            placeholder="Search clinical topics, symptoms..." aria-label="Search articles">
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           FEATURED ARTICLE (HERO CARD)
+           ==================================================================== -->
+      <article class="blog-featured-card blog-card-item" data-category="surgery">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-6">
+            <div class="blog-featured-img-wrap">
+              <img src="images/clinic/daycare-suite.jpg"
+                alt="Minimally Invasive Daycare Surgery Suite at AzeeHealth Clinics" loading="lazy">
+              <span class="blog-featured-badge">
+                <i class="bi bi-star-fill me-1"></i> Featured Article
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="blog-featured-body">
+              <div class="blog-meta">
+                <span class="blog-category-tag">Daycare &amp; Surgery</span>
+                <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Oct 04, 2026</span>
+                <span class="blog-meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+              </div>
+
+              <h2 class="blog-featured-title">
+                Understanding Modern Minimally Invasive Daycare Surgery: Faster Healing with Zero Overnight Stays
+              </h2>
+
+              <p class="blog-featured-excerpt">
+                Advances in high-precision laparoscopy and laser proctology have transformed patient recovery. Discover how day-care surgical interventions reduce infection risks, minimise physical trauma, and allow safe discharge to your home comforts within hours.
+              </p>
+
+              <div class="blog-author-row">
+                <div class="blog-author-info">
+                  <img src="images/doctors/dr-rahul-varma.jpg" alt="Dr. Rahul Varma" class="blog-author-avatar">
+                  <div>
+                    <h3 class="blog-author-name">Dr. Rahul Varma</h3>
+                    <p class="blog-author-role">MS, DNB &bull; General &amp; Laparoscopic Surgeon</p>
+                  </div>
+                </div>
+
+                <button type="button" class="blog-read-btn btn-read-article"
+                  data-bs-toggle="modal" data-bs-target="#articleReaderModal"
+                  data-title="Understanding Modern Minimally Invasive Daycare Surgery: Faster Healing with Zero Overnight Stays"
+                  data-category-label="Daycare &amp; Surgery"
+                  data-date="Oct 04, 2026"
+                  data-read-time="5 min read"
+                  data-author-name="Dr. Rahul Varma"
+                  data-author-role="MS, DNB • General &amp; Laparoscopic Surgeon"
+                  data-author-img="images/doctors/dr-rahul-varma.jpg"
+                  data-image="images/clinic/daycare-suite.jpg"
+                  data-content="<p>Traditionally, any surgical intervention meant several days of institutional hospitalisation, strict bed rest, and prolonged recovery timelines away from family and workplace responsibilities. Modern medical engineering and advanced laparoscopic and laser systems have fundamentally changed this paradigm.</p><h4>Why Daycare Procedures Are Safer &amp; More Comfortable</h4><p>At AzeeHealth Clinics, our dedicated Day Care surgical suites are engineered specifically for short-stay, high-precision procedures. Patients undergo surgery in the morning and return to the comfort and hygiene of their home by late afternoon.</p><ul><li><strong>Lower Hospital-Acquired Infection Rates:</strong> Shorter stays in a clinical environment dramatically minimise exposure to multi-drug resistant pathogens common in large general wards.</li><li><strong>Sub-Millimetre Laser Precision:</strong> For conditions like piles, fissures, and fistulas, laser fibre technology targets only abnormal tissue, avoiding open wounds and suture pain.</li><li><strong>Advanced Multimodal Analgesia:</strong> Modern anaesthetic and local nerve block protocols ensure patients wake up pain-free without the grogginess of older sedation techniques.</li></ul><div class='blog-takeaway-box'><h5>Clinical Takeaway</h5><p>Daycare surgery does not compromise on safety; rather, it combines state-of-the-art surgical technology with structured at-home recovery protocols for faster, smoother rehabilitation.</p></div><h4>What to Expect on Procedure Day</h4><p>Patients arrive at our clinic fasted according to pre-operative instructions. Following pre-anaesthetic clearance, the procedure is carried out in our HEPA-filtered operating theatre. After a monitored 2 to 4-hour post-op observation in our recovery bay with light nourishment, our doctors conduct a discharge audit and provide digital prescriptions and 24/7 coordinator access.</p>">
+                  <span>Read Full Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           STANDARD BLOG ARTICLES GRID (5 ARTICLES)
+           ==================================================================== -->
+      <div class="row g-4" id="blogGridContainer">
+
+        <!-- Article 1: Preventive Health Screenings -->
+        <div class="col-lg-4 col-md-6 blog-card-item" data-category="preventive">
+          <article class="blog-card">
+            <div class="blog-card-thumb-wrap">
+              <img src="images/clinic/facility-reception.jpg"
+                alt="Preventive Health Screenings at AzeeHealth Clinics" class="blog-card-thumb" loading="lazy">
+              <span class="blog-card-badge">Preventive Health</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Sep 28, 2026</span>
+                <span class="blog-meta-item"><i class="bi bi-clock"></i> 4 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                The Silent Symptoms: Why Annual Health Screenings Save Lives After 30
+              </h3>
+              <p class="blog-card-excerpt">
+                Routine biochemical panels, metabolic profiling, and early cardiac markers detect physiological abnormalities years before visible symptoms or acute crises occur.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-author-info">
+                  <img src="images/doctors/dr-ananya-rao.jpg" alt="Dr. Ananya Rao" class="blog-author-avatar">
+                  <div>
+                    <h4 class="blog-author-name">Dr. Ananya Rao</h4>
+                    <p class="blog-author-role">MD Internal Medicine</p>
+                  </div>
+                </div>
+                <button type="button" class="blog-read-btn btn-read-article"
+                  data-bs-toggle="modal" data-bs-target="#articleReaderModal"
+                  data-title="The Silent Symptoms: Why Annual Health Screenings Save Lives After 30"
+                  data-category-label="Preventive Health"
+                  data-date="Sep 28, 2026"
+                  data-read-time="4 min read"
+                  data-author-name="Dr. Ananya Rao"
+                  data-author-role="MD Internal Medicine &bull; Consultant Physician"
+                  data-author-img="images/doctors/dr-ananya-rao.jpg"
+                  data-image="images/clinic/facility-reception.jpg"
+                  data-content="<p>Hypertension, pre-diabetes, dyslipidaemia, and fatty liver disease share one dangerous characteristic: they progress quietly without causing noticeable pain or overt warning signs until significant vascular or organ strain has already taken place.</p><h4>Key Biomarkers Everyone Should Track Annually</h4><p>A structured annual clinical checkup goes far beyond a quick stethoscope examination. Essential baseline markers include:</p><ul><li><strong>Glycated Haemoglobin (HbA1c):</strong> Evaluates 90-day average blood sugar control, catching insulin resistance years before clinical Type 2 Diabetes develops.</li><li><strong>Lipid Fractionation (ApoB &amp; Non-HDL):</strong> Reveals true atherogenic particle counts, far superior to simple total cholesterol figures.</li><li><strong>Renal &amp; Hepatic Function Panels:</strong> Early markers like eGFR and elevated ALT/AST indicate lifestyle-induced stress before clinical symptoms appear.</li><li><strong>Cardiac Rhythm &amp; ECG:</strong> Establishes electrical baselines to flag conduction anomalies or early ischaemic strain.</li></ul><div class='blog-takeaway-box'><h5>Clinical Takeaway</h5><p>Investing 60 minutes once a year in comprehensive preventive diagnostics allows lifestyle reversals or minor interventions that prevent catastrophic acute emergencies.</p></div>">
+                  <span>Read</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Article 2: Laser Proctology -->
+        <div class="col-lg-4 col-md-6 blog-card-item" data-category="surgery">
+          <article class="blog-card">
+            <div class="blog-card-thumb-wrap">
+              <img src="images/services/daycare.jpg"
+                alt="Laser Proctology Treatment Care" class="blog-card-thumb" loading="lazy">
+              <span class="blog-card-badge">Daycare &amp; Surgery</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Sep 22, 2026</span>
+                <span class="blog-meta-item"><i class="bi bi-clock"></i> 6 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                Piles, Fistula &amp; Fissures: Debunking Common Myths Around Laser Proctology
+              </h3>
+              <p class="blog-card-excerpt">
+                Fear and social hesitation often delay clinical care for anorectal conditions. Discover why modern diode lasers preserve sphincter integrity with minimal downtime.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-author-info">
+                  <img src="images/doctors/dr-rahul-varma.jpg" alt="Dr. Rahul Varma" class="blog-author-avatar">
+                  <div>
+                    <h4 class="blog-author-name">Dr. Rahul Varma</h4>
+                    <p class="blog-author-role">Laparoscopic Surgeon</p>
+                  </div>
+                </div>
+                <button type="button" class="blog-read-btn btn-read-article"
+                  data-bs-toggle="modal" data-bs-target="#articleReaderModal"
+                  data-title="Piles, Fistula &amp; Fissures: Debunking Common Myths Around Laser Proctology"
+                  data-category-label="Daycare &amp; Surgery"
+                  data-date="Sep 22, 2026"
+                  data-read-time="6 min read"
+                  data-author-name="Dr. Rahul Varma"
+                  data-author-role="MS, DNB • General &amp; Laparoscopic Surgeon"
+                  data-author-img="images/doctors/dr-rahul-varma.jpg"
+                  data-image="images/services/daycare.jpg"
+                  data-content="<p>Anorectal ailments like haemorrhoids (piles), anal fissures, and complex perianal fistulas are among the most prevalent yet unnecessarily prolonged conditions due to social stigma and outdated notions of painful, bloody surgeries.</p><h4>The Laser Advantage in Proctology</h4><p>Diode laser energy delivered through micro-optic radial fibres has modernised proctological management:</p><ul><li><strong>Zero Cutting of the Anal Sphincter:</strong> Traditional open haemorrhoidectomy cut sensitive mucosal tissue. Laser energy photocoagulates the haemorrhoidal arterial blood supply from within, preserving the sphincter muscles completely.</li><li><strong>Virtually No Open Wounds:</strong> Absence of incision lines translates to almost zero post-operative bleeding and minimal wound dressing requirements.</li><li><strong>Discharge within 4 to 6 Hours:</strong> Patients walk out of our clinic comfortable and confident on the very day of the procedure.</li></ul><div class='blog-takeaway-box'><h5>Clinical Takeaway</h5><p>Early evaluation with our proctology specialists prevents secondary complications like severe anaemia, recurrent perianal abscesses, or complex fistula branching.</p></div>">
+                  <span>Read</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Article 3: Women's Health & PCOS -->
+        <div class="col-lg-4 col-md-6 blog-card-item" data-category="wellness">
+          <article class="blog-card">
+            <div class="blog-card-thumb-wrap">
+              <img src="images/about.jpg"
+                alt="Women's Health & PCOS Clinical Guidance" class="blog-card-thumb" loading="lazy">
+              <span class="blog-card-badge">Wellness &amp; Nutrition</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Sep 15, 2026</span>
+                <span class="blog-meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                Women's Hormonal Balance &amp; PCOS: A Multi-Disciplinary Clinical Guide
+              </h3>
+              <p class="blog-card-excerpt">
+                Managing Polycystic Ovary Syndrome requires a tailored combination of insulin sensitisation, nutrition adjustments, and empathetic gynaecological monitoring.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-author-info">
+                  <img src="images/doctors/dr-priya-sharma.jpg" alt="Dr. Priya Sharma" class="blog-author-avatar">
+                  <div>
+                    <h4 class="blog-author-name">Dr. Priya Sharma</h4>
+                    <p class="blog-author-role">Obstetrics &amp; Gynaecology</p>
+                  </div>
+                </div>
+                <button type="button" class="blog-read-btn btn-read-article"
+                  data-bs-toggle="modal" data-bs-target="#articleReaderModal"
+                  data-title="Women's Hormonal Balance &amp; PCOS: A Multi-Disciplinary Clinical Guide"
+                  data-category-label="Wellness &amp; Nutrition"
+                  data-date="Sep 15, 2026"
+                  data-read-time="5 min read"
+                  data-author-name="Dr. Priya Sharma"
+                  data-author-role="MS OBG, Fellow Reproductive Medicine"
+                  data-author-img="images/doctors/dr-priya-sharma.jpg"
+                  data-image="images/about.jpg"
+                  data-content="<p>Polycystic Ovary Syndrome (PCOS) is fundamentally an endocrine and metabolic condition rather than an isolated ovarian disorder. It affects 1 in 5 women of reproductive age and presents with irregular menstrual cycles, hirsutism, cystic acne, and metabolic weight resistance.</p><h4>Building a Sustainable Management Strategy</h4><p>Successful management moves past one-size-fits-all hormonal birth control pills to address root biochemical drivers:</p><ul><li><strong>Targeting Insulin Resistance:</strong> Chronic hyperinsulinaemia stimulates excess ovarian androgen production. Low glycemic index nutrition, regular resistance exercise, and targeted inositol supplementation restore sensitivity.</li><li><strong>Individualised Cycle Regularisation:</strong> Tailoring cycle support according to immediate family planning goals and hormonal blood panels.</li><li><strong>Preventing Long-Term Endometrial Hyperplasia:</strong> Ensuring regular scheduled bleeds protects long-term endometrial health.</li></ul><div class='blog-takeaway-box'><h5>Clinical Takeaway</h5><p>PCOS is completely manageable with dedicated medical supervision, compassionate lifestyle restructuring, and consistent tracking of metabolic health parameters.</p></div>">
+                  <span>Read</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Article 4: Pharmacy Management -->
+        <div class="col-lg-4 col-md-6 blog-card-item" data-category="pharmacy">
+          <article class="blog-card">
+            <div class="blog-card-thumb-wrap">
+              <img src="images/clinic/pharmacy-suite.jpg"
+                alt="AzeeHealth Clinical Pharmacy Services" class="blog-card-thumb" loading="lazy">
+              <span class="blog-card-badge">Pharmacy &amp; Meds</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Sep 09, 2026</span>
+                <span class="blog-meta-item"><i class="bi bi-clock"></i> 4 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                Safe Medication Protocols: Cold-Chain Verification &amp; Interaction Checks
+              </h3>
+              <p class="blog-card-excerpt">
+                Why temperature-controlled cold chains, clinical pharmacist cross-checks, and digital prescription tracking are critical for pharmaceutical efficacy.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-author-info">
+                  <img src="images/services/pharmacy.jpg" alt="AzeeHealth Pharmacy" class="blog-author-avatar">
+                  <div>
+                    <h4 class="blog-author-name">Clinical Pharmacy Dept</h4>
+                    <p class="blog-author-role">Pharmacy Specialist</p>
+                  </div>
+                </div>
+                <button type="button" class="blog-read-btn btn-read-article"
+                  data-bs-toggle="modal" data-bs-target="#articleReaderModal"
+                  data-title="Safe Medication Protocols: Cold-Chain Verification &amp; Interaction Checks"
+                  data-category-label="Pharmacy &amp; Meds"
+                  data-date="Sep 09, 2026"
+                  data-read-time="4 min read"
+                  data-author-name="Clinical Pharmacy Dept"
+                  data-author-role="Quality Assurance &amp; Dispensing Lead"
+                  data-author-img="images/services/pharmacy.jpg"
+                  data-image="images/clinic/pharmacy-suite.jpg"
+                  data-content="<p>Medications are delicate biochemical formulations. The efficacy of life-saving biologics, insulins, vaccines, and specialized eye drops drops dramatically if exposure to fluctuating temperatures or counterfeit distribution chains occurs.</p><h4>Our Clinical Pharmacy Standards</h4><p>At AzeeHealth Clinics, the pharmacy works in direct synchrony with attending physicians:</p><ul><li><strong>Unbroken 2°C – 8°C Cold Chain Tracking:</strong> Digital continuous data loggers verify that biological and temperature-sensitive drugs remain strictly refrigerated from manufacturer to patient hands.</li><li><strong>Dual Cross-Verification:</strong> Pharmacists evaluate every digital prescription against patient allergies and potential drug-drug or drug-food interactions.</li><li><strong>Direct Batch Traceability:</strong> Every dispensing unit is sourced only from authorised pharmaceutical distributors with verifiable batch certificates.</li></ul><div class='blog-takeaway-box'><h5>Clinical Takeaway</h5><p>Always verify manufacturing expiry dates and ensure temperature-sensitive medications are transported home using insulated ice-packs provided by our pharmacy desk.</p></div>">
+                  <span>Read</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Article 5: Orthopaedics & Joint Care -->
+        <div class="col-lg-4 col-md-6 blog-card-item" data-category="wellness">
+          <article class="blog-card">
+            <div class="blog-card-thumb-wrap">
+              <img src="images/hero.jpg"
+                alt="Orthopaedics & Joint Mobility Guidance" class="blog-card-thumb" loading="lazy">
+              <span class="blog-card-badge">Wellness &amp; Mobility</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Aug 30, 2026</span>
+                <span class="blog-meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                Joint Health in the Digital Age: Preventing Knee &amp; Cervical Spine Strain
+              </h3>
+              <p class="blog-card-excerpt">
+                Desk-bound work habits place chronic stress on spinal discs and weight-bearing joints. Ergonomic adjustments and early interventions that protect long-term cartilage.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-author-info">
+                  <img src="images/doctors/dr-arjun-reddy.jpg" alt="Dr. Arjun Reddy" class="blog-author-avatar">
+                  <div>
+                    <h4 class="blog-author-name">Dr. Arjun Reddy</h4>
+                    <p class="blog-author-role">Orthopaedics &amp; Joint Care</p>
+                  </div>
+                </div>
+                <button type="button" class="blog-read-btn btn-read-article"
+                  data-bs-toggle="modal" data-bs-target="#articleReaderModal"
+                  data-title="Joint Health in the Digital Age: Preventing Knee &amp; Cervical Spine Strain"
+                  data-category-label="Wellness &amp; Mobility"
+                  data-date="Aug 30, 2026"
+                  data-read-time="5 min read"
+                  data-author-name="Dr. Arjun Reddy"
+                  data-author-role="MS Orthopaedics • Joint &amp; Sports Injury Specialist"
+                  data-author-img="images/doctors/dr-arjun-reddy.jpg"
+                  data-image="images/hero.jpg"
+                  data-content="<p>Extended sedentary postures, poor monitor elevation, and rapid weekend sports injuries have made cervical radiculopathy and early knee patellofemoral syndrome common in young working adults between 25 and 45.</p><h4>Practical Preventive Biomechanics</h4><p>Preserving joint cartilage requires consistent mechanical hygiene:</p><ul><li><strong>Monitor at Eye Level:</strong> Tilting your head forward by just 45 degrees increases effective cervical spine weight load from 5 kg to almost 22 kg.</li><li><strong>Strengthen Quadriceps &amp; Glutes:</strong> Knee joint stability is directly mediated by strong surrounding muscle groups. Regular isometric squats reduce compressive force on cartilage.</li><li><strong>Address Persistent Clicking or Pain Early:</strong> Mild synovitis or small meniscus tears treated early with physiotherapy prevent premature osteoarthritic wear.</li></ul><div class='blog-takeaway-box'><h5>Clinical Takeaway</h5><p>Do not dismiss persistent joint stiffness as ordinary fatigue. Timely clinical assessment and diagnostic imaging catch degeneration while it is still fully reversible.</p></div>">
+                  <span>Read</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- No Results State (Hidden by default) -->
+      <div id="blogNoResults" class="text-center py-5" style="display: none;">
+        <i class="bi bi-journal-x display-3 text-muted mb-3 d-block"></i>
+        <h3 class="h4 text-dark-navy">No Articles Found</h3>
+        <p class="text-muted">We couldn't find any clinical articles matching your search criteria. Try different keywords or click "All Insights".</p>
+      </div>
+
+      <!-- ====================================================================
+           NEWSLETTER SUBSCRIPTION SECTION
+           ==================================================================== -->
+      <div class="blog-newsletter-section">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2 class="blog-newsletter-title">Stay Informed with Clinical Insights</h2>
+            <p class="blog-newsletter-subtitle">
+              Subscribe to the AzeeHealth Clinical Dispatch. Receive verified preventive healthcare advice, seasonal wellness updates, and surgical recovery guides directly in your inbox.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <form class="blog-newsletter-form" id="blogNewsletterForm">
+              <input type="email" class="blog-newsletter-input" placeholder="Enter your email address" required
+                aria-label="Email address for medical newsletter">
+              <button type="submit" class="btn btn-gold px-4">
+                <i class="bi bi-send-fill me-1"></i> Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ARTICLE READER MODAL
+       ======================================================================== -->
+  <div class="modal fade" id="articleReaderModal" tabindex="-1" aria-labelledby="articleModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header blog-modal-header">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success-subtle text-success fw-bold" id="articleModalCategory">Category</span>
+              <span class="text-muted small">&bull;</span>
+              <span class="text-muted small" id="articleModalDate">Date</span>
+              <span class="text-muted small">&bull;</span>
+              <span class="text-muted small" id="articleModalReadTime">Read Time</span>
+            </div>
+            <h2 class="modal-title h4 mb-0 fw-bold text-dark-navy" id="articleModalTitle">Article Title</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body blog-modal-body">
+          <div class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom">
+            <img src="images/logo.png" alt="Author" id="articleModalAuthorImg" class="blog-author-avatar">
+            <div>
+              <div class="fw-bold text-dark-navy" id="articleModalAuthorName">Author Name</div>
+              <div class="small text-muted" id="articleModalAuthorRole">Doctor Specialisation</div>
+            </div>
+          </div>
+
+          <div class="mb-4 rounded-3 overflow-hidden" style="max-height: 380px;">
+            <img src="images/clinic/facility-reception.jpg" alt="Article Cover" id="articleModalImage"
+              class="w-100 h-100 object-fit-cover">
+          </div>
+
+          <!-- Dynamic Rich Content injected by script.js -->
+          <div id="articleModalContent" class="article-rich-text">
+            <p>Loading clinical article details...</p>
+          </div>
+        </div>
+
+        <div class="modal-footer bg-light d-flex justify-content-between align-items-center">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <div class="d-flex gap-2">
+            <a href="tel:+918309432284" class="btn btn-outline-navy btn-sm">
+              <i class="bi bi-telephone-fill"></i> Inquire by Phone
+            </a>
+            <button type="button" class="btn btn-primary-navy btn-sm" data-bs-dismiss="modal"
+              data-bs-toggle="modal" data-bs-target="#appointmentModal">
+              <i class="bi bi-calendar2-check"></i> Book Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER SECTION (GREEN THEME WITH COPYRIGHT BUBBLES ANIMATION)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 footer-main-content">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <img src="images/logo-light.png" alt="AzeeHealth Clinics" class="footer-logo mb-2" width="220" height="64"
+              loading="lazy">
+            <p class="footer-clinic-desc">
+              Precision clinical procedures, rapid daycare recovery, and compassionate family healthcare. Serving Hyderabad with excellence, integrity, and warmth.
+            </p>
+          </div>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right small"></i> About</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Services</a></li>
+            <li><a href="doctors.html"><i class="bi bi-chevron-right small"></i> Doctors</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right small"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Consultation</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Procedures</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Pharmacy</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Day Care</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Preventive Care</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Details -->
+        <div class="col-lg-3">
+          <h3 class="footer-heading">Contact Details</h3>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Road No. xx xxxx Hills, Near Metro Pillar xxxx, Hyderabad, Telangana 5000xx</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span><a href="tel:+918309432284" class="text-white">+91 8309432284</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span><a href="mailto:care@azeehealthclinics.com" class="text-white">care@azeehealthclinics.com</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <span>Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: Day Care &amp; Emergency</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom / Copyright Section -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="footer-copyright-text d-flex flex-wrap align-items-center gap-2">
+          <span>&copy; <span id="current-year">2026</span> AzeeHealth Clinics. All Rights Reserved.</span>
+          <span class="footer-copy-separator d-none d-sm-inline">&bull;</span>
+          <span class="footer-designer-credit">
+            Design by <a href="https://thebubblesmedia.com/" target="_blank" rel="noopener noreferrer"
+              class="bubbles-media-link" aria-label="Design by The Bubbles Media">
+              <span class="bubbles-media-text">The Bubbles Media</span>
+              <span class="bubbles-animation-wrap" aria-hidden="true">
+                <span class="bubble b1"></span>
+                <span class="bubble b2"></span>
+                <span class="bubble b3"></span>
+                <span class="bubble b4"></span>
+                <span class="bubble b5"></span>
+                <span class="bubble b6"></span>
+                <span class="bubble b7"></span>
+                <span class="bubble b8"></span>
+              </span>
+            </a>
+          </span>
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Patient Rights</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BOOK APPOINTMENT MODAL (GLOBAL)
+       ======================================================================== -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h2 class="modal-title h5 mb-1" id="appointmentModalTitle">Schedule an Appointment</h2>
+            <div class="small text-muted">AzeeHealth Clinics &bull; Precision &bull; Care &bull; Well Being</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-success d-none" id="modalSuccessAlert" role="alert" tabindex="-1">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-check-circle-fill fs-4 me-2"></i>
+              <div>
+                <strong>Appointment Request Received!</strong><br>
+                Thank you. Your appointment request has been received. Our clinical coordinator will call you within 15
+                minutes to confirm your preferred schedule.
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" id="modalErrorAlert" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            Please fill in all mandatory fields with valid details.
+          </div>
+
+          <form id="modalAppointmentForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="modalPatientName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="modalPatientName" placeholder="e.g. Anand Sharma" required
+                  autocomplete="name">
+                <div class="invalid-feedback">Please provide patient's full name.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="modalPatientPhone" class="form-label">Phone Number <span
+                    class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="modalPatientPhone" placeholder="+91 98490 12345" required
+                  autocomplete="tel">
+                <div class="invalid-feedback">Please enter a valid phone number.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="modalPatientEmail" class="form-label">Email Address <span
+                    class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="modalPatientEmail" placeholder="patient@example.com"
+                  required autocomplete="email">
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="modalAppointmentDept" class="form-label">Department / Service <span
+                    class="text-danger">*</span></label>
+                <select class="form-select" id="modalAppointmentDept" required>
+                  <option value="" selected disabled>Select Department</option>
+                  <option value="Proctology">Proctology (Piles, Fistula, Fissure, Sinus)</option>
+                  <option value="General & Laparoscopic Surgery">General &amp; Laparoscopic Surgery (Hernia,
+                    Gallbladder)</option>
+                  <option value="Bariatric & Gastroenterology">Bariatric &amp; Surgical Gastroenterology</option>
+                  <option value="ENT (Ear, Nose & Throat)">ENT (Otitis media, Tonsillectomy)</option>
+                  <option value="Urology & Kidney Care">Urology &amp; Kidney Care (Kidney Stone, Circumcision)</option>
+                  <option value="Gynaecology & Women's Health">Gynaecology &amp; Women's Health</option>
+                  <option value="Orthopaedics & Joint Care">Orthopaedics &amp; Joint Care (Sports Injuries, Fractures)
+                  </option>
+                  <option value="Plastic & Cosmetic Surgery">Plastic &amp; Cosmetic Surgery</option>
+                  <option value="General Consultation">General Medicine &amp; Physician</option>
+                  <option value="Day Care">Day Care &amp; Clinical Procedures</option>
+                  <option value="Preventive Healthcare">Preventive Health Checkup</option>
+                </select>
+                <div class="invalid-feedback">Please choose a department.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="modalAppointmentDoctor" class="form-label">Preferred Doctor (Optional)</label>
+                <select class="form-select" id="modalAppointmentDoctor">
+                  <option value="" selected>Any Available Specialist</option>
+                  <option value="Dr. Ananya Rao">Dr. Ananya Rao (General Medicine)</option>
+                  <option value="Dr. Rahul Varma">Dr. Rahul Varma (General Surgery)</option>
+                  <option value="Dr. Priya Sharma">Dr. Priya Sharma (Women's Health)</option>
+                  <option value="Dr. Arjun Reddy">Dr. Arjun Reddy (Orthopaedics)</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="modalAppointmentDate" class="form-label">Preferred Date <span
+                    class="text-danger">*</span></label>
+                <input type="date" class="form-control" id="modalAppointmentDate" required>
+                <div class="invalid-feedback">Please select a preferred consultation date.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="modalAppointmentNotes" class="form-label">Reason for Visit or Symptoms (Optional)</label>
+                <textarea class="form-control" id="modalAppointmentNotes" rows="2"
+                  placeholder="Briefly describe your symptoms or request..."></textarea>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex justify-content-end gap-2">
+              <button type="button" class="btn btn-outline-navy" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary-navy">
+                <i class="bi bi-calendar-check"></i> Confirm Appointment Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky CTA & Back to Top -->
+  <div class="mobile-sticky-cta" id="mobileStickyCta">
+    <a href="tel:+918309432284" class="btn btn-outline-navy flex-fill btn-sm">
+      <i class="bi bi-telephone-fill text-sage"></i> Call Clinic
+    </a>
+    <button type="button" class="btn btn-primary-navy flex-fill btn-sm" data-bs-toggle="modal"
+      data-bs-target="#appointmentModal">
+      <i class="bi bi-calendar2-check"></i> Book Now
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       FLOATING QUICK ACTIONS (BOOK, CALL, WHATSAPP)
+       ======================================================================== -->
+  <aside class="floating-contact-actions" id="floatingContactActions" aria-label="Quick contact channels">
+    <button type="button" class="floating-btn floating-book-btn" id="floatingBookBtn"
+      data-bs-toggle="modal" data-bs-target="#appointmentModal"
+      aria-label="Book an Appointment" title="Book an Appointment">
+      <i class="bi bi-calendar2-check-fill" aria-hidden="true"></i>
+      <span class="floating-btn-tooltip">Book Appointment</span>
+    </button>
+    <a href="tel:+918309432284" class="floating-btn floating-call-btn" id="floatingCallBtn"
+      aria-label="Call clinic at +91 8309432284" title="Call +91 8309432284">
+      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+      <span class="floating-btn-tooltip">Call: +91 8309432284</span>
+    </a>
+    <a href="https://wa.me/918309432284?text=Hello%20Azee%20Health%20Clinics%2C%20I%20would%20like%20to%20inquire%20about%20an%20appointment"
+      target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp-btn" id="floatingWhatsappBtn"
+      aria-label="Chat with Azee Health Clinics on WhatsApp at +91 8309432284" title="Chat on WhatsApp">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      <span class="floating-btn-tooltip">Chat on WhatsApp</span>
+      <span class="floating-pulse-ring" aria-hidden="true"></span>
+    </a>
+  </aside>
+
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js?v=2.2"></script>
+</body>
+
+</html>

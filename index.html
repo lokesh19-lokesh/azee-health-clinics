@@ -124,6 +124,31 @@
     </div>
   </div>
 
+  <!-- Inline Preloader Controller (Guarantees instant smooth entrance to homepage without waiting for external CDNs) -->
+  <script>
+    (function () {
+      var preloader = document.getElementById('pagePreloader');
+      if (!preloader) return;
+      var dismissed = false;
+      function dismiss() {
+        if (dismissed) return;
+        dismissed = true;
+        preloader.classList.add('preloader-hidden');
+        document.body.classList.add('page-ready');
+        setTimeout(function () {
+          if (preloader && preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          }
+        }, 700);
+      }
+      // Guarantees smooth entrance within 900ms
+      setTimeout(dismiss, 900);
+      window.addEventListener('load', function () {
+        setTimeout(dismiss, 150);
+      }, { once: true });
+    })();
+  </script>
+
   <!-- ========================================================================
        TOP UTILITY BAR
        ======================================================================== -->
@@ -175,6 +200,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="doctors.html" id="navDoctorsLink">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html" id="navBlogLink">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html" id="navContactLink">Contact</a>
@@ -1200,6 +1228,142 @@
     </section>
 
     <!-- ----------------------------------------------------------------------
+         SECTION 7B — HEALTH INSIGHTS & CLINICAL BLOG PREVIEW
+         ---------------------------------------------------------------------- -->
+    <section class="section-padding bg-white" id="homeBlogSection">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-5">
+          <div>
+            <div class="section-eyebrow mb-2">
+              <span class="section-eyebrow-dot"></span>
+              CLINICAL KNOWLEDGE &amp; WELLNESS
+            </div>
+            <h2 class="section-heading mb-0">Latest Health Insights</h2>
+            <p class="section-subheading mt-2 mb-0">
+              Doctor-curated medical guides, daycare surgery recovery protocols, and preventive healthcare advice.
+            </p>
+          </div>
+          <div>
+            <a href="blog.html" class="btn btn-outline-navy">
+              <span>View All Articles</span>
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Preview Article 1 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-thumb-wrap">
+                <img src="images/clinic/daycare-suite.jpg"
+                  alt="Minimally Invasive Daycare Surgery" class="blog-card-thumb" loading="lazy">
+                <span class="blog-card-badge">Daycare &amp; Surgery</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Oct 04, 2026</span>
+                  <span class="blog-meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog.html">Understanding Modern Minimally Invasive Daycare Surgery</a>
+                </h3>
+                <p class="blog-card-excerpt">
+                  Discover how high-precision laparoscopy and laser proctology reduce infection risks and enable same-day recovery.
+                </p>
+                <div class="blog-card-footer">
+                  <div class="blog-author-info">
+                    <img src="images/doctors/dr-rahul-varma.jpg" alt="Dr. Rahul Varma" class="blog-author-avatar">
+                    <div>
+                      <h4 class="blog-author-name">Dr. Rahul Varma</h4>
+                      <p class="blog-author-role">Laparoscopic Surgeon</p>
+                    </div>
+                  </div>
+                  <a href="blog.html" class="blog-read-btn">
+                    <span>Read</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Preview Article 2 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-thumb-wrap">
+                <img src="images/clinic/facility-reception.jpg"
+                  alt="Preventive Health Screenings" class="blog-card-thumb" loading="lazy">
+                <span class="blog-card-badge">Preventive Health</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Sep 28, 2026</span>
+                  <span class="blog-meta-item"><i class="bi bi-clock"></i> 4 min read</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog.html">The Silent Symptoms: Why Annual Health Screenings Save Lives</a>
+                </h3>
+                <p class="blog-card-excerpt">
+                  Routine biochemical profiling and cardiac markers catch abnormalities years before clinical symptoms emerge.
+                </p>
+                <div class="blog-card-footer">
+                  <div class="blog-author-info">
+                    <img src="images/doctors/dr-ananya-rao.jpg" alt="Dr. Ananya Rao" class="blog-author-avatar">
+                    <div>
+                      <h4 class="blog-author-name">Dr. Ananya Rao</h4>
+                      <p class="blog-author-role">Internal Medicine</p>
+                    </div>
+                  </div>
+                  <a href="blog.html" class="blog-read-btn">
+                    <span>Read</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Preview Article 3 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-thumb-wrap">
+                <img src="images/about.jpg"
+                  alt="Women's Health & PCOS" class="blog-card-thumb" loading="lazy">
+                <span class="blog-card-badge">Wellness &amp; Nutrition</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Sep 15, 2026</span>
+                  <span class="blog-meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog.html">Women's Hormonal Balance &amp; PCOS: A Clinical Guide</a>
+                </h3>
+                <p class="blog-card-excerpt">
+                  Navigating PCOS through tailored insulin sensitisation, lifestyle restructuring, and gynaecological support.
+                </p>
+                <div class="blog-card-footer">
+                  <div class="blog-author-info">
+                    <img src="images/doctors/dr-priya-sharma.jpg" alt="Dr. Priya Sharma" class="blog-author-avatar">
+                    <div>
+                      <h4 class="blog-author-name">Dr. Priya Sharma</h4>
+                      <p class="blog-author-role">Gynaecologist</p>
+                    </div>
+                  </div>
+                  <a href="blog.html" class="blog-read-btn">
+                    <span>Read</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
          SECTION 8 — APPOINTMENT CTA (NAVY BANNER)
          ---------------------------------------------------------------------- -->
     <section class="section-padding bg-navy-primary cta-banner text-center" id="appointmentCtaSection">
@@ -1267,6 +1431,7 @@
             <li><a href="about.html"><i class="bi bi-chevron-right small"></i> About</a></li>
             <li><a href="services.html"><i class="bi bi-chevron-right small"></i> Services</a></li>
             <li><a href="doctors.html"><i class="bi bi-chevron-right small"></i> Doctors</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Blog</a></li>
             <li><a href="contact.html"><i class="bi bi-chevron-right small"></i> Contact</a></li>
           </ul>
         </div>

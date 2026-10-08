@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   const preloader = document.getElementById('pagePreloader');
   if (preloader) {
-    const minDisplayTime = 850;
+    const minDisplayTime = 700;
     const loadStart = window.performance ? window.performance.now() : Date.now();
     let isDismissed = false;
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dismissPreloader();
     } else {
       window.addEventListener('load', dismissPreloader, { once: true });
-      setTimeout(dismissPreloader, 2500);
+      setTimeout(dismissPreloader, 950);
     }
   }
 
@@ -681,4 +681,121 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ------------------------------------------------------------------------
+  // 17. Blog Filtering & Article Reader Modal System
+  // ------------------------------------------------------------------------
+  const blogCategoryBtns = document.querySelectorAll('.blog-category-btn');
+  const blogCards = document.querySelectorAll('.blog-card-item');
+  const blogSearchInput = document.getElementById('blogSearchInput');
+  const blogNoResults = document.getElementById('blogNoResults');
+
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  const filterBlogPosts = () => {
+    let visibleCount = 0;
+
+    blogCards.forEach(card => {
+      const category = card.getAttribute('data-category') || '';
+      const title = (card.querySelector('.blog-card-title, .blog-featured-title')?.textContent || '').toLowerCase();
+      const excerpt = (card.querySelector('.blog-card-excerpt, .blog-featured-excerpt')?.textContent || '').toLowerCase();
+
+      const matchesCat = (activeCategory === 'all' || category === activeCategory);
+      const matchesSearch = (!searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery));
+
+      if (matchesCat && matchesSearch) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (blogNoResults) {
+      blogNoResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+    }
+  };
+
+  if (blogCategoryBtns.length > 0) {
+    blogCategoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        blogCategoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.getAttribute('data-category') || 'all';
+        filterBlogPosts();
+      });
+    });
+  }
+
+  if (blogSearchInput) {
+    blogSearchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      filterBlogPosts();
+    });
+  }
+
+  // Article Reader Modal Population
+  const articleModal = document.getElementById('articleReaderModal');
+  if (articleModal) {
+    const populateArticleModal = (button) => {
+      if (!button) return;
+      const title = button.getAttribute('data-title') || '';
+      const category = button.getAttribute('data-category-label') || '';
+      const date = button.getAttribute('data-date') || '';
+      const readTime = button.getAttribute('data-read-time') || '';
+      const authorName = button.getAttribute('data-author-name') || '';
+      const authorRole = button.getAttribute('data-author-role') || '';
+      const authorImg = button.getAttribute('data-author-img') || '';
+      const img = button.getAttribute('data-image') || '';
+      const content = button.getAttribute('data-content') || '';
+
+      const modalTitle = document.getElementById('articleModalTitle');
+      const modalCategory = document.getElementById('articleModalCategory');
+      const modalDate = document.getElementById('articleModalDate');
+      const modalReadTime = document.getElementById('articleModalReadTime');
+      const modalAuthorImg = document.getElementById('articleModalAuthorImg');
+      const modalAuthorName = document.getElementById('articleModalAuthorName');
+      const modalAuthorRole = document.getElementById('articleModalAuthorRole');
+      const modalImage = document.getElementById('articleModalImage');
+      const modalContent = document.getElementById('articleModalContent');
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalCategory) modalCategory.textContent = category;
+      if (modalDate) modalDate.textContent = date;
+      if (modalReadTime) modalReadTime.textContent = readTime;
+      if (modalAuthorName) modalAuthorName.textContent = authorName;
+      if (modalAuthorRole) modalAuthorRole.textContent = authorRole;
+      if (modalAuthorImg && authorImg) modalAuthorImg.src = authorImg;
+      if (modalImage && img) modalImage.src = img;
+      if (modalContent && content) modalContent.innerHTML = content;
+    };
+
+    articleModal.addEventListener('show.bs.modal', (event) => {
+      const button = event.relatedTarget ? (event.relatedTarget.closest('.btn-read-article') || event.relatedTarget) : null;
+      if (button) {
+        populateArticleModal(button);
+      }
+    });
+
+    document.querySelectorAll('.btn-read-article').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const trigger = e.target.closest('.btn-read-article') || btn;
+        populateArticleModal(trigger);
+      });
+    });
+  }
+
+  // Blog Newsletter Form
+  const newsletterForm = document.getElementById('blogNewsletterForm');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = newsletterForm.querySelector('input[type="email"]');
+      if (input && input.value) {
+        alert('Thank you for subscribing to AzeeHealth Clinical Updates! You will receive our latest preventive wellness articles.');
+        input.value = '';
+      }
+    });
+  }
 });
