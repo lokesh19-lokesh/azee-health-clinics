@@ -2314,6 +2314,24 @@ header,
   box-shadow: 0 12px 30px rgba(11, 59, 99, 0.45);
 }
 
+/* Book Appointment Floating Button */
+.floating-book-btn {
+  background: linear-gradient(135deg, #C7A86B 0%, #B89758 50%, #9E7D3E 100%);
+  color: #082C4A;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 24px rgba(199, 168, 107, 0.42);
+  outline: none;
+  padding: 0;
+}
+
+.floating-book-btn:hover,
+.floating-book-btn:focus-visible {
+  background: linear-gradient(135deg, #E2BC43 0%, #D4AF37 50%, #B89758 100%);
+  color: #082C4A;
+  box-shadow: 0 12px 30px rgba(199, 168, 107, 0.6);
+  transform: scale(1.08) translateY(-2px);
+}
+
 /* Subtle Glowing Pulse Radar on WhatsApp */
 .floating-pulse-ring {
   position: absolute;
@@ -2382,7 +2400,7 @@ header,
 
 .back-to-top-btn {
   position: fixed;
-  bottom: 154px;
+  bottom: 222px;
   right: 28px;
   width: 44px;
   height: 44px;
@@ -2625,7 +2643,7 @@ header,
     display: none;
   }
   .back-to-top-btn {
-    bottom: 194px;
+    bottom: 256px;
     right: 18px;
     width: 40px;
     height: 40px;
@@ -2661,7 +2679,7 @@ header,
     font-size: 1.2rem;
   }
   .back-to-top-btn {
-    bottom: 178px;
+    bottom: 238px;
     right: 15px;
     width: 36px;
     height: 36px;
