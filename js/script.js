@@ -7,6 +7,47 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // ------------------------------------------------------------------------
+  // 0. Page Preloader & Animated Logo Controller
+  // ------------------------------------------------------------------------
+  const preloader = document.getElementById('pagePreloader');
+  if (preloader) {
+    const minDisplayTime = 850;
+    const loadStart = window.performance ? window.performance.now() : Date.now();
+    let isDismissed = false;
+
+    const dismissPreloader = () => {
+      if (isDismissed) return;
+      isDismissed = true;
+
+      const now = window.performance ? window.performance.now() : Date.now();
+      const elapsed = now - loadStart;
+      const delay = Math.max(0, minDisplayTime - elapsed);
+
+      setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+        document.body.classList.add('page-ready');
+
+        if (window.ScrollTrigger) {
+          window.ScrollTrigger.refresh();
+        }
+
+        setTimeout(() => {
+          if (preloader && preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          }
+        }, 700);
+      }, delay);
+    };
+
+    if (document.readyState === 'complete') {
+      dismissPreloader();
+    } else {
+      window.addEventListener('load', dismissPreloader, { once: true });
+      setTimeout(dismissPreloader, 2500);
+    }
+  }
+
+  // ------------------------------------------------------------------------
   // 1. Current Year in Footer
   // ------------------------------------------------------------------------
   const yearElement = document.getElementById('current-year');

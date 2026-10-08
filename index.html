@@ -88,6 +88,43 @@
 <body>
 
   <!-- ========================================================================
+       PAGE PRELOADER WITH LOGO ANIMATION (HOME PAGE)
+       ======================================================================== -->
+  <div class="page-preloader" id="pagePreloader" role="status" aria-live="polite" aria-label="Loading AzeeHealth Clinics">
+    <div class="preloader-content">
+      <!-- Concentric Sonar Halo Rings -->
+      <div class="preloader-rings" aria-hidden="true">
+        <span class="preloader-ring ring-1"></span>
+        <span class="preloader-ring ring-2"></span>
+        <span class="preloader-ring ring-3"></span>
+      </div>
+
+      <!-- Glowing Brand Logo Capsule -->
+      <div class="preloader-logo-card">
+        <img src="images/logo.png" alt="AzeeHealth Clinics - Precision | Care | Well Being" class="preloader-logo-img" width="280" height="80">
+        <!-- Metallic Shimmer Sweep -->
+        <div class="preloader-shimmer" aria-hidden="true"></div>
+      </div>
+
+      <!-- ECG Heartbeat Vitality Trace -->
+      <div class="preloader-ecg-wrap" aria-hidden="true">
+        <svg class="preloader-ecg-svg" viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="preloader-ecg-bg" d="M0,20 L65,20 L75,14 L85,26 L92,20 L105,20 L112,4 L120,36 L128,12 L134,24 L140,20 L152,20 L160,16 L168,20 L240,20" />
+          <path class="preloader-ecg-pulse" d="M0,20 L65,20 L75,14 L85,26 L92,20 L105,20 L112,4 L120,36 L128,12 L134,24 L140,20 L152,20 L160,16 L168,20 L240,20" />
+        </svg>
+      </div>
+
+      <!-- Clinic Motto & Dynamic Progress Bar -->
+      <div class="preloader-meta">
+        <span class="preloader-slogan">PRECISION &bull; CARE &bull; WELL BEING</span>
+        <div class="preloader-progress-track" aria-hidden="true">
+          <div class="preloader-progress-bar" id="preloaderProgressBar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
        TOP UTILITY BAR
        ======================================================================== -->
   <div class="top-bar d-none d-md-block" id="topUtilityBar">

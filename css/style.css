@@ -2777,3 +2777,260 @@ body.has-gsap .reveal-fade-up {
   }
 }
 
+/* --------------------------------------------------------------------------
+   17. Page Preloader & Animated Logo Experience
+   -------------------------------------------------------------------------- */
+.page-preloader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #1C4D38 0%, #143828 65%, #0E261B 100%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.page-preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.preloader-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 2;
+}
+
+/* Concentric Sonar Halo Rings */
+.preloader-rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.preloader-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(45, 212, 191, 0.35);
+  animation: sonarRing 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.preloader-ring.ring-2 {
+  animation-delay: 0.9s;
+  border-color: rgba(199, 168, 107, 0.3);
+}
+
+.preloader-ring.ring-3 {
+  animation-delay: 1.8s;
+  border-color: rgba(45, 212, 191, 0.2);
+}
+
+@keyframes sonarRing {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+/* Logo Capsule Card */
+.preloader-logo-card {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 16px 36px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(199, 168, 107, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45),
+              0 0 35px rgba(45, 212, 191, 0.3);
+  overflow: hidden;
+  z-index: 3;
+  animation: preloaderLogoPulse 2.4s ease-in-out infinite;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-logo-img {
+  height: 70px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes preloaderLogoPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(45, 212, 191, 0.25);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 50px rgba(45, 212, 191, 0.45);
+  }
+}
+
+/* Metallic Light Shimmer Sweep across Logo */
+.preloader-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.65) 50%, transparent 80%);
+  transform: translateX(-120%);
+  animation: shimmerSweep 2.2s infinite ease-in-out;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-120%); }
+  55%, 100% { transform: translateX(120%); }
+}
+
+/* ECG Vitality Trace */
+.preloader-ecg-wrap {
+  width: 220px;
+  height: 38px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  z-index: 3;
+}
+
+.preloader-ecg-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.preloader-ecg-bg {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.preloader-ecg-pulse {
+  stroke: #2DD4BF;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 45 195;
+  stroke-dashoffset: 240;
+  filter: drop-shadow(0 0 6px #2DD4BF);
+  animation: preloaderEcg 1.5s linear infinite;
+}
+
+@keyframes preloaderEcg {
+  0% { stroke-dashoffset: 240; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Slogan & Progress Bar */
+.preloader-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 3;
+}
+
+.preloader-slogan {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.preloader-progress-track {
+  width: 170px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #C7A86B 0%, #2DD4BF 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(45, 212, 191, 0.8);
+  animation: preloaderProgressFill 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes preloaderProgressFill {
+  0% { width: 0%; }
+  35% { width: 45%; }
+  75% { width: 85%; }
+  100% { width: 100%; }
+}
+
+@media (max-width: 576px) {
+  .preloader-logo-card {
+    padding: 12px 24px;
+    border-radius: 16px;
+  }
+  .preloader-logo-img {
+    height: 52px;
+    max-width: 220px;
+  }
+  .preloader-rings {
+    width: 260px;
+    height: 260px;
+  }
+  .preloader-ecg-wrap {
+    width: 180px;
+    height: 32px;
+    margin-top: 1.25rem;
+  }
+  .preloader-slogan {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+  .preloader-progress-track {
+    width: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-ring,
+  .preloader-logo-card,
+  .preloader-shimmer,
+  .preloader-ecg-pulse,
+  .preloader-progress-bar {
+    animation: none !important;
+  }
+  .preloader-progress-bar {
+    width: 100%;
+  }
+}
+
