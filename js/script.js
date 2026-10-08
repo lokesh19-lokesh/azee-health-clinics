@@ -592,4 +592,52 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('input[type="date"]').forEach(dateInput => {
     dateInput.setAttribute('min', today);
   });
+
+  // ------------------------------------------------------------------------
+  // The Bubbles Media - Interactive Floating Bubble Particles on Hover
+  // ------------------------------------------------------------------------
+  const bubblesLinks = document.querySelectorAll('.bubbles-media-link');
+  bubblesLinks.forEach(link => {
+    let lastSpawn = 0;
+
+    const createBubble = (x, y) => {
+      const bubble = document.createElement('span');
+      bubble.className = 'dynamic-bubble-sparkle';
+      const size = Math.random() * 16 + 10; // 10px to 26px
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${x - size / 2}px`;
+      bubble.style.top = `${y - size / 2}px`;
+
+      const dx = (Math.random() - 0.5) * 44; // horizontal drift
+      const dy = -(Math.random() * 55 + 40); // rise 40px to 95px
+      bubble.style.setProperty('--dx', `${dx}px`);
+      bubble.style.setProperty('--dy', `${dy}px`);
+
+      document.body.appendChild(bubble);
+
+      setTimeout(() => {
+        bubble.remove();
+      }, 1200);
+    };
+
+    link.addEventListener('mousemove', (e) => {
+      const now = Date.now();
+      if (now - lastSpawn > 80) { // throttle spawn
+        lastSpawn = now;
+        createBubble(e.clientX, e.clientY);
+      }
+    });
+
+    link.addEventListener('mouseenter', (e) => {
+      const rect = link.getBoundingClientRect();
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          const x = rect.left + Math.random() * rect.width;
+          const y = rect.top + rect.height * 0.7;
+          createBubble(x, y);
+        }, i * 80);
+      }
+    });
+  });
 });
