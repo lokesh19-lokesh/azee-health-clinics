@@ -373,15 +373,15 @@ img {
    5. Header & Navigation
    -------------------------------------------------------------------------- */
 .top-bar {
-  background-color: var(--color-dark-navy);
-  color: rgba(255, 255, 255, 0.8);
+  background-color: #143828;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.825rem;
   padding: 0.45rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top-bar a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   transition: color var(--transition-fast);
 }
 
@@ -407,11 +407,12 @@ header,
 }
 
 .navbar-custom {
-  background-color: var(--color-white);
+  background: linear-gradient(135deg, #1C4D38 0%, #256348 100%);
   padding: 0.75rem 0;
   width: 100%;
   transition: all var(--transition-normal);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(16, 52, 36, 0.18);
 }
 
 .navbar-custom .container {
@@ -423,10 +424,11 @@ header,
 
 .navbar-custom.scrolled {
   padding: 0.5rem 0;
-  box-shadow: var(--shadow-navbar);
-  background-color: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 26px rgba(16, 52, 36, 0.28);
+  background: rgba(25, 71, 51, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Brand Wordmark & Logo */
@@ -438,21 +440,28 @@ header,
 }
 
 .navbar-logo-img {
-  height: 62px;
+  height: 56px;
   width: auto;
   max-width: 250px;
   object-fit: contain;
   display: block;
+  background-color: #FFFFFF;
+  padding: 5px 14px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   transition: all var(--transition-normal);
 }
 
 .brand-wrapper:hover .navbar-logo-img {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 52px;
+  height: 48px;
   max-width: 215px;
+  padding: 4px 12px;
 }
 
 .footer-logo-bg {
@@ -479,23 +488,28 @@ header,
 }
 
 .navbar-toggler {
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
-  background-color: var(--color-warm-white);
-  color: var(--color-primary-navy);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
   flex-shrink: 0;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
+.navbar-toggler i,
+.navbar-toggler .bi {
+  color: #FFFFFF !important;
+}
+
 .navbar-toggler:hover {
-  background-color: var(--color-light-sage);
-  border-color: var(--color-sage-green);
+  background-color: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 3px rgba(107, 118, 85, 0.25);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
   outline: none;
 }
 
@@ -510,7 +524,7 @@ header,
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--color-primary-navy);
+  color: rgba(255, 255, 255, 0.92);
   padding: 0.5rem 1rem !important;
   position: relative;
   transition: color var(--transition-fast);
@@ -518,11 +532,12 @@ header,
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-  color: var(--color-sage-green);
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .navbar-nav .nav-link.active {
-  color: var(--color-secondary-blue);
+  color: #FFFFFF;
   font-weight: 700;
 }
 
@@ -532,8 +547,8 @@ header,
   bottom: 0;
   left: 1rem;
   right: 1rem;
-  height: 2.5px;
-  background-color: var(--color-sage-green);
+  height: 3px;
+  background-color: var(--color-accent-gold);
   border-radius: 2px;
 }
 
@@ -547,20 +562,39 @@ header,
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.875rem;
-  color: var(--color-primary-navy);
+  color: #1C4D38;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.55rem 0.9rem;
+  padding: 0.55rem 0.95rem;
   border-radius: var(--radius-sm);
-  background-color: var(--color-warm-white);
-  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transition: all var(--transition-fast);
 }
 
 .btn-nav-call:hover {
   background-color: var(--color-light-sage);
-  color: var(--color-primary-navy);
+  color: #143828;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-custom .btn-primary-navy {
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, #B89758 100%);
+  border-color: var(--color-accent-gold);
+  color: #082C4A;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-custom .btn-primary-navy:hover {
+  background: linear-gradient(135deg, #d8bc80 0%, var(--color-accent-gold) 100%);
+  border-color: #d8bc80;
+  color: #082C4A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -2062,12 +2096,12 @@ header,
   .navbar-collapse {
     flex-basis: 100%;
     width: 100%;
-    background-color: var(--color-white);
+    background-color: #163d2c;
     padding: 1.25rem;
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     margin-top: 0.75rem;
-    box-shadow: var(--shadow-card-hover);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
   }
 
   .nav-actions {
@@ -2075,7 +2109,7 @@ header,
     align-items: stretch;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .floating-hero-card {
