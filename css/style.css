@@ -404,14 +404,23 @@ header,
   top: 0;
   z-index: 1030;
   width: 100%;
+  background: transparent;
+}
+
+.site-header.scrolled {
+  background: transparent;
+}
+
+.navbar-custom,
+.navbar-custom.scrolled {
+  background: linear-gradient(135deg, #1C4D38 0%, #256348 100%) !important;
+  width: 100%;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .navbar-custom {
-  background: linear-gradient(135deg, #1C4D38 0%, #256348 100%);
   padding: 0.75rem 0;
-  width: 100%;
-  transition: all var(--transition-normal);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 20px rgba(16, 52, 36, 0.18);
 }
 
@@ -423,12 +432,8 @@ header,
 }
 
 .navbar-custom.scrolled {
-  padding: 0.5rem 0;
-  box-shadow: 0 6px 26px rgba(16, 52, 36, 0.28);
-  background: rgba(25, 71, 51, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.55rem 0;
+  box-shadow: 0 6px 26px rgba(16, 52, 36, 0.32);
 }
 
 /* Brand Wordmark & Logo */
