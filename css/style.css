@@ -1891,6 +1891,7 @@ header,
   z-index: 2;
   background: linear-gradient(90deg, #FFFFFF 0%, #DDE4D5 45%, #C7A86B 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all var(--transition-fast);
   border-bottom: 1.5px dotted rgba(199, 168, 107, 0.65);
