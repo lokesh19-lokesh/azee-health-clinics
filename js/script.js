@@ -456,6 +456,34 @@ document.addEventListener('DOMContentLoaded', () => {
         'Rapid sample turnaround and digital report delivery'
       ],
       whyAzee: 'Quality-controlled diagnostic partner laboratories, clinical verification by senior doctors, and seamless digital record storage.'
+    },
+    'physiotherapy': {
+      title: 'Physiotherapy & Rehabilitation',
+      icon: 'bi-activity',
+      tagline: 'Evidence-based physical therapy, joint recovery, and mobility restoration',
+      overview: 'Our specialized Physiotherapy & Rehabilitation department offers targeted clinical care for acute musculoskeletal injuries, postoperative recovery, chronic back & joint pain, and ergonomic disorders.',
+      offer: [
+        'Post-operative musculoskeletal rehabilitation and joint mobilization',
+        'Cervical, lumbar, and spinal posture alignment and pain relief therapy',
+        'Sports injury rehabilitation and custom strengthening protocols',
+        'Ergonomic biomechanical audits and preventive movement training'
+      ],
+      who: 'Patients recovering from orthopaedic surgery, sports injuries, chronic joint or back pain, and working professionals with postural strain.',
+      whyAzee: 'Dedicated physical therapy suites, individualized 1-on-1 sessions with licensed therapists, and coordinated care with senior orthopaedic specialists.'
+    },
+    'wellness': {
+      title: 'Wellness & Lifestyle Medicine',
+      icon: 'bi-heart-pulse',
+      tagline: 'Comprehensive lifestyle medicine, clinical nutrition, and holistic vitality',
+      overview: 'AzeeHealth Wellness integrates scientific preventive medicine with personalized nutritional counseling, stress resilience, and metabolic lifestyle optimization.',
+      offer: [
+        'Doctor-guided metabolic and cardiovascular lifestyle counseling',
+        'Personalized clinical nutrition and dietary intervention roadmaps',
+        'Chronic lifestyle disease reversal and weight management guidance',
+        'Stress mitigation, sleep hygiene coaching, and holistic vitality audits'
+      ],
+      who: 'Individuals aiming to optimize everyday energy, reverse metabolic risks, manage stress, and build sustainable, long-term vitality.',
+      whyAzee: 'Physician-supervised wellness protocols rooted in evidence-based lifestyle medicine, without fads or unscientific regimens.'
     }
   };
 
