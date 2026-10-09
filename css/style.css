@@ -2828,7 +2828,8 @@ body.has-gsap .reveal-fade-up {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #1C4D38 0%, #143828 65%, #0E261B 100%);
+  background-color: #D99A53 !important;
+  background: radial-gradient(circle at center, #F0BA7D 0%, #D99A53 60%, #BC7B34 100%) !important;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
@@ -2871,18 +2872,18 @@ body.has-gsap .reveal-fade-up {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1.5px solid rgba(45, 212, 191, 0.35);
+  border: 1.5px solid rgba(8, 44, 74, 0.22);
   animation: sonarRing 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
 }
 
 .preloader-ring.ring-2 {
   animation-delay: 0.9s;
-  border-color: rgba(199, 168, 107, 0.3);
+  border-color: rgba(8, 44, 74, 0.16);
 }
 
 .preloader-ring.ring-3 {
   animation-delay: 1.8s;
-  border-color: rgba(45, 212, 191, 0.2);
+  border-color: rgba(8, 44, 74, 0.10);
 }
 
 @keyframes sonarRing {
@@ -2891,7 +2892,7 @@ body.has-gsap .reveal-fade-up {
     opacity: 0.9;
   }
   60% {
-    opacity: 0.4;
+    opacity: 0.35;
   }
   100% {
     transform: scale(1.75);
@@ -2899,14 +2900,15 @@ body.has-gsap .reveal-fade-up {
   }
 }
 
-/* Logo Capsule Card */
+/* Logo Presentation */
 .preloader-logo-card {
   position: relative;
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
+  background-color: transparent !important;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
   overflow: visible;
   z-index: 3;
   animation: preloaderLogoPulse 2.4s ease-in-out infinite;
@@ -2916,34 +2918,28 @@ body.has-gsap .reveal-fade-up {
 }
 
 .preloader-logo-img {
-  height: 72px;
+  height: 68px;
   width: auto;
   max-width: 300px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 4px 12px rgba(8, 44, 74, 0.18));
 }
 
 @keyframes preloaderLogoPulse {
   0%, 100% {
     transform: scale(1);
-    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 4px 12px rgba(8, 44, 74, 0.18));
   }
   50% {
-    transform: scale(1.04);
-    filter: drop-shadow(0 14px 35px rgba(45, 212, 191, 0.45));
+    transform: scale(1.03);
+    filter: drop-shadow(0 8px 20px rgba(8, 44, 74, 0.28));
   }
 }
 
-/* Metallic Light Shimmer Sweep across Logo */
+/* Metallic Light Shimmer Sweep across Logo (disabled for clean appearance) */
 .preloader-shimmer {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.65) 50%, transparent 80%);
-  transform: translateX(-120%);
-  animation: shimmerSweep 2.2s infinite ease-in-out;
-  border-radius: inherit;
-  pointer-events: none;
+  display: none;
 }
 
 @keyframes shimmerSweep {
@@ -2967,20 +2963,20 @@ body.has-gsap .reveal-fade-up {
 }
 
 .preloader-ecg-bg {
-  stroke: rgba(255, 255, 255, 0.15);
+  stroke: rgba(8, 44, 74, 0.2);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .preloader-ecg-pulse {
-  stroke: #2DD4BF;
+  stroke: #082C4A;
   stroke-width: 2.4;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 45 195;
   stroke-dashoffset: 240;
-  filter: drop-shadow(0 0 6px #2DD4BF);
+  filter: drop-shadow(0 0 6px rgba(8, 44, 74, 0.4));
   animation: preloaderEcg 1.5s linear infinite;
 }
 
@@ -3001,17 +2997,17 @@ body.has-gsap .reveal-fade-up {
 .preloader-slogan {
   font-family: var(--font-heading);
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.22em;
-  color: var(--color-accent-gold);
+  color: #082C4A;
   text-transform: uppercase;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .preloader-progress-track {
   width: 170px;
   height: 3px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(8, 44, 74, 0.18);
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -3020,9 +3016,9 @@ body.has-gsap .reveal-fade-up {
 .preloader-progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #C7A86B 0%, #2DD4BF 100%);
+  background: linear-gradient(90deg, #082C4A 0%, #145A8D 100%);
   border-radius: 4px;
-  box-shadow: 0 0 8px rgba(45, 212, 191, 0.8);
+  box-shadow: 0 0 8px rgba(8, 44, 74, 0.4);
   animation: preloaderProgressFill 0.85s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
