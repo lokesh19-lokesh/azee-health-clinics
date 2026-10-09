@@ -373,11 +373,11 @@ img {
    5. Header & Navigation
    -------------------------------------------------------------------------- */
 .top-bar {
-  background-color: #143828;
-  color: rgba(255, 255, 255, 0.85);
+  background-color: #B27432;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 0.825rem;
   padding: 0.45rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .top-bar a {
@@ -386,14 +386,14 @@ img {
 }
 
 .top-bar a:hover {
-  color: var(--color-accent-gold);
+  color: #FFFFFF;
 }
 
 .top-bar-divider {
   display: inline-block;
   width: 1px;
   height: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
   margin: 0 0.75rem;
   vertical-align: middle;
 }
@@ -413,15 +413,15 @@ header,
 
 .navbar-custom,
 .navbar-custom.scrolled {
-  background: linear-gradient(135deg, #1C4D38 0%, #256348 100%) !important;
+  background: #D99A53 !important;
   width: 100%;
   transition: all var(--transition-normal);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .navbar-custom {
-  padding: 0.75rem 0;
-  box-shadow: 0 4px 20px rgba(16, 52, 36, 0.18);
+  padding: 0.65rem 0;
+  box-shadow: 0 4px 20px rgba(120, 70, 20, 0.16);
 }
 
 .navbar-custom .container {
@@ -432,8 +432,8 @@ header,
 }
 
 .navbar-custom.scrolled {
-  padding: 0.55rem 0;
-  box-shadow: 0 6px 26px rgba(16, 52, 36, 0.32);
+  padding: 0.45rem 0;
+  box-shadow: 0 6px 26px rgba(120, 70, 20, 0.24);
 }
 
 /* Brand Wordmark & Logo */
@@ -442,31 +442,32 @@ header,
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+  padding: 2px 0;
 }
 
 .navbar-logo-img {
-  height: 72px;
+  height: 52px;
   width: auto;
-  max-width: 300px;
+  max-width: 250px;
   object-fit: contain;
   display: block;
-  background-color: #FFFFFF;
-  padding: 6px 18px;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  transition: all var(--transition-normal);
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .brand-wrapper:hover .navbar-logo-img {
-  transform: scale(1.03);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+  transform: scale(1.02);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 58px;
-  max-width: 245px;
-  padding: 5px 14px;
+  height: 44px;
+  max-width: 220px;
+  padding: 0;
 }
 
 .footer-logo-bg {
@@ -493,28 +494,29 @@ header,
 }
 
 .navbar-toggler {
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border: 1.5px solid rgba(8, 44, 74, 0.3);
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
-  background-color: rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #082C4A;
   flex-shrink: 0;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .navbar-toggler i,
-.navbar-toggler .bi {
-  color: #FFFFFF !important;
+.navbar-toggler .bi,
+.navbar-toggler .text-white {
+  color: #082C4A !important;
 }
 
 .navbar-toggler:hover {
-  background-color: rgba(255, 255, 255, 0.24);
-  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(8, 44, 74, 0.5);
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(8, 44, 74, 0.25);
   outline: none;
 }
 
@@ -527,9 +529,9 @@ header,
 /* Nav Links */
 .navbar-nav .nav-link {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: #082C4A;
   padding: 0.5rem 1rem !important;
   position: relative;
   transition: color var(--transition-fast);
@@ -537,13 +539,13 @@ header,
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-  color: #FFFFFF;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  color: #051B2E;
+  text-shadow: none;
 }
 
 .navbar-nav .nav-link.active {
-  color: #FFFFFF;
-  font-weight: 700;
+  color: #051B2E;
+  font-weight: 800;
 }
 
 .navbar-nav .nav-link.active::after {
@@ -553,7 +555,7 @@ header,
   left: 1rem;
   right: 1rem;
   height: 3px;
-  background-color: var(--color-accent-gold);
+  background-color: #082C4A;
   border-radius: 2px;
 }
 
@@ -565,41 +567,42 @@ header,
 
 .btn-nav-call {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.875rem;
-  color: #1C4D38;
+  color: #082C4A;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   padding: 0.55rem 0.95rem;
   border-radius: var(--radius-sm);
   background-color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(8, 44, 74, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all var(--transition-fast);
 }
 
 .btn-nav-call:hover {
-  background-color: var(--color-light-sage);
-  color: #143828;
+  background-color: #F8FAFC;
+  color: #051B2E;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
 .navbar-custom .btn-primary-navy {
-  background: linear-gradient(135deg, var(--color-accent-gold) 0%, #B89758 100%);
-  border-color: var(--color-accent-gold);
-  color: #082C4A;
+  background: #082C4A;
+  border-color: #082C4A;
+  color: #FFFFFF;
   font-weight: 700;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 3px 10px rgba(8, 44, 74, 0.25);
+  transition: all var(--transition-fast);
 }
 
 .navbar-custom .btn-primary-navy:hover {
-  background: linear-gradient(135deg, #d8bc80 0%, var(--color-accent-gold) 100%);
-  border-color: #d8bc80;
-  color: #082C4A;
+  background: #0E3D66;
+  border-color: #0E3D66;
+  color: #FFFFFF;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(8, 44, 74, 0.35);
 }
 
 
@@ -2493,9 +2496,9 @@ header,
   }
 
   .navbar-logo-img {
-    height: 60px;
-    max-width: 250px;
-    padding: 5px 14px;
+    height: 44px;
+    max-width: 210px;
+    padding: 0;
   }
 
   .navbar-toggler {
@@ -2508,12 +2511,12 @@ header,
   .navbar-collapse {
     flex-basis: 100%;
     width: 100%;
-    background-color: #163d2c;
+    background-color: #C98942;
     padding: 1.25rem;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     margin-top: 0.75rem;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
   }
 
   .nav-actions {
@@ -2543,9 +2546,9 @@ header,
 
 @media (max-width: 575.98px) {
   .navbar-logo-img {
-    height: 50px;
-    max-width: 205px;
-    padding: 4px 10px;
+    height: 38px;
+    max-width: 180px;
+    padding: 0;
   }
 
   .navbar-toggler {
