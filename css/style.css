@@ -1987,19 +1987,27 @@ header,
    12. Footer
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: var(--color-dark-navy);
-  color: rgba(255, 255, 255, 0.75);
+  background-color: #D99A53;
+  color: #082C4A;
   font-size: 0.925rem;
   padding-top: 5rem;
   padding-bottom: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-footer p,
+.site-footer .text-white-50,
+.site-footer .footer-clinic-desc {
+  color: #082C4A !important;
+  opacity: 0.92;
+  font-weight: 500;
 }
 
 .footer-heading {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.05rem;
-  color: var(--color-white);
+  color: #082C4A;
   margin-bottom: 1.35rem;
   letter-spacing: -0.01em;
 }
@@ -2015,7 +2023,8 @@ header,
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.75);
+  color: #082C4A;
+  font-weight: 600;
   transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -2023,11 +2032,18 @@ header,
 }
 
 .footer-links a:hover {
-  color: var(--color-light-sage);
+  color: #051B2E;
   transform: translateX(3px);
 }
 
+.footer-links a i {
+  color: #082C4A;
+  opacity: 0.75;
+}
+
 .footer-contact-item {
+  color: #082C4A;
+  font-weight: 500;
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -2036,7 +2052,7 @@ header,
 }
 
 .footer-contact-item i {
-  color: var(--color-light-sage);
+  color: #082C4A;
   font-size: 1.1rem;
   margin-top: 2px;
   flex-shrink: 0;
@@ -2052,33 +2068,33 @@ header,
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-white);
+  background-color: rgba(8, 44, 74, 0.1);
+  color: #082C4A;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   transition: all var(--transition-fast);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(8, 44, 74, 0.2);
 }
 
 .footer-social-btn:hover {
-  background-color: var(--color-sage-green);
-  color: var(--color-white);
-  border-color: var(--color-sage-green);
+  background-color: #082C4A;
+  color: #FFFFFF;
+  border-color: #082C4A;
   transform: translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
-   Footer Copyright Section (Green Theme) & The Bubbles Media Animation
+   Footer Copyright Section & The Bubbles Media Animation
    -------------------------------------------------------------------------- */
 .footer-bottom {
   margin-top: 3.5rem;
   padding: 1.25rem 1.75rem;
-  background: linear-gradient(135deg, #143828 0%, #1E513A 100%);
+  background: #082C4A;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px rgba(10, 35, 22, 0.35);
+  box-shadow: 0 8px 24px rgba(8, 44, 74, 0.25);
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.85);
 }
