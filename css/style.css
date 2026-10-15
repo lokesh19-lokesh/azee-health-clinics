@@ -484,9 +484,9 @@ header,
 }
 
 .navbar-logo-img {
-  height: 72px;
+  height: 88px;
   width: auto;
-  max-width: 320px;
+  max-width: 360px;
   object-fit: contain;
   display: block;
   background-color: transparent;
@@ -503,8 +503,8 @@ header,
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 56px;
-  max-width: 250px;
+  height: 64px;
+  max-width: 280px;
   padding: 0;
 }
 
@@ -526,9 +526,9 @@ header,
 
 .footer-logo-img,
 .footer-logo {
-  height: 68px;
+  height: 78px;
   width: auto;
-  max-width: 280px;
+  max-width: 300px;
   object-fit: contain;
   display: block;
 }
@@ -2936,8 +2936,8 @@ header,
   }
 
   .navbar-logo-img {
-    height: 58px;
-    max-width: 250px;
+    height: 68px;
+    max-width: 280px;
     padding: 0;
   }
 
@@ -2986,8 +2986,8 @@ header,
 
 @media (max-width: 575.98px) {
   .navbar-logo-img {
-    height: 48px;
-    max-width: 210px;
+    height: 54px;
+    max-width: 230px;
     padding: 0;
   }
 
@@ -3380,9 +3380,9 @@ body.has-gsap .reveal-fade-up {
 }
 
 .preloader-logo-img {
-  height: 84px;
+  height: 96px;
   width: auto;
-  max-width: 340px;
+  max-width: 380px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 4px 12px rgba(8, 44, 74, 0.18));
@@ -3524,8 +3524,8 @@ body.has-gsap .reveal-fade-up {
   }
 
   .preloader-logo-img {
-    height: 64px;
-    max-width: 260px;
+    height: 72px;
+    max-width: 280px;
   }
 
   .preloader-rings {
