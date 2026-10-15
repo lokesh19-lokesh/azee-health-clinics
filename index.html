@@ -357,45 +357,51 @@
             </div>
           </div>
 
-          <!-- Right: Interactive 3D Medical Stage (Replaces static image) -->
+          <!-- Right: Certified Clinical Procedures Suite Showcase -->
           <div class="col-lg-6 hero-3d-showcase-col">
-            <div class="hero-3d-stage" id="hero3dStage" role="region" aria-label="Interactive 3D Medical Matrix Model">
-              <!-- Live 3D Scene Badge -->
+            <div class="hero-3d-stage hero-procedure-stage" id="hero3dStage" role="region" aria-label="Certified Clinical Procedure Suite">
+              <!-- Certified Suite Badge -->
               <div class="stage-tag-badge">
                 <span class="live-dot"></span>
-                <span>INTERACTIVE 3D BIO-CELLULAR MATRIX</span>
+                <span>CERTIFIED PROCEDURAL SUITES</span>
               </div>
 
-              <!-- Interactive Three.js Canvas -->
-              <div class="hero-canvas-container" id="heroCanvasContainer">
-                <canvas id="heroThreeCanvas"></canvas>
+              <!-- Static Hero Procedure Image Container -->
+              <div class="hero-image-media-wrapper">
+                <img src="images/clinical-procedures-hero.jpg"
+                  alt="AzeeHealth Certified Clinical Procedural Suite - Sterile Minor Interventions and Daycare Surgery"
+                  class="hero-procedure-img"
+                  width="1200" height="900"
+                  loading="eager"
+                  fetchpriority="high">
+                <div class="hero-image-overlay-gradient" aria-hidden="true"></div>
               </div>
 
-              <!-- Floating Info Card 1: Patient-Centered Care -->
+              <!-- Floating Info Card 1: Sterile Minor Interventions -->
               <div class="floating-hero-card floating-card-top" id="floatingHeroCardTop">
                 <div class="floating-card-icon" aria-hidden="true">
-                  <i class="bi bi-heart-pulse"></i>
+                  <i class="bi bi-shield-check"></i>
                 </div>
                 <div>
-                  <div class="floating-card-title">Patient-Centered Care</div>
-                  <p class="floating-card-text">Specialist medical support at every step.</p>
+                  <div class="floating-card-title">Sterile Minor Interventions</div>
+                  <p class="floating-card-text">Autoclave standards • Local anesthesia</p>
                 </div>
               </div>
 
-              <!-- Floating Info Card 2: Precision Diagnostics -->
+              <!-- Floating Info Card 2: Daycare Clinical Procedures -->
               <div class="floating-hero-card floating-card-bottom" id="floatingHeroCardBottom">
                 <div class="floating-card-icon bg-teal-subtle text-teal" aria-hidden="true">
-                  <i class="bi bi-activity"></i>
+                  <i class="bi bi-hospital"></i>
                 </div>
                 <div>
-                  <div class="floating-card-title">Precision Diagnostics</div>
-                  <p class="floating-card-text">Minimally invasive modern therapies.</p>
+                  <div class="floating-card-title">Daycare Procedures</div>
+                  <p class="floating-card-text">Suturing, cyst excision &amp; PRP injections</p>
                 </div>
               </div>
 
-              <!-- Interaction Hint -->
-              <div class="stage-interaction-hint" aria-hidden="true">
-                <i class="bi bi-arrows-move me-1"></i> Drag or swipe to rotate 3D model
+              <!-- Zero Hospital Stay Badge -->
+              <div class="stage-procedure-pill" aria-hidden="true">
+                <i class="bi bi-check-circle-fill text-sage me-1"></i> Zero Unnecessary Hospital Stay
               </div>
             </div>
           </div>

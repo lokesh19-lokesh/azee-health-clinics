@@ -1181,6 +1181,52 @@ header,
   touch-action: pan-y;
 }
 
+.hero-image-media-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-procedure-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-3d-stage:hover .hero-procedure-img {
+  transform: scale(1.035);
+}
+
+.hero-image-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 44, 74, 0.12) 0%, rgba(8, 44, 74, 0.02) 40%, rgba(8, 44, 74, 0.32) 100%);
+  pointer-events: none;
+}
+
+.stage-procedure-pill {
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(10, 143, 130, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  z-index: 5;
+}
+
 .stage-interaction-hint {
   position: absolute;
   bottom: 14px;
@@ -3222,7 +3268,8 @@ body.has-gsap .reveal-fade-up {
     margin-top: 1rem;
   }
 
-  .hero-canvas-container {
+  .hero-canvas-container,
+  .hero-image-media-wrapper {
     border-radius: 24px;
   }
 
@@ -3247,8 +3294,13 @@ body.has-gsap .reveal-fade-up {
     border-radius: 20px;
   }
 
-  .hero-canvas-container {
+  .hero-canvas-container,
+  .hero-image-media-wrapper {
     border-radius: 20px;
+  }
+
+  .stage-procedure-pill {
+    display: none;
   }
 
   .stage-tag-badge {
