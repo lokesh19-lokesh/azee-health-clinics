@@ -3340,8 +3340,8 @@ body.has-gsap .reveal-fade-up {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #D99A53 !important;
-  background: radial-gradient(circle at center, #F0BA7D 0%, #D99A53 60%, #BC7B34 100%) !important;
+  background-color: #ffffff !important;
+  background: #ffffff !important;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
