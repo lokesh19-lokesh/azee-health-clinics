@@ -458,7 +458,7 @@ header,
 }
 
 .navbar-custom {
-  padding: 0.65rem 0;
+  padding: 0.5rem 0;
   box-shadow: 0 4px 20px rgba(120, 70, 20, 0.16);
 }
 
@@ -469,8 +469,15 @@ header,
   flex-wrap: wrap;
 }
 
+@media (min-width: 992px) {
+  .navbar-custom .container {
+    max-width: 1260px;
+    flex-wrap: nowrap !important;
+  }
+}
+
 .navbar-custom.scrolled {
-  padding: 0.45rem 0;
+  padding: 0.35rem 0;
   box-shadow: 0 6px 26px rgba(120, 70, 20, 0.24);
 }
 
@@ -484,9 +491,9 @@ header,
 }
 
 .navbar-logo-img {
-  height: 88px;
+  height: 44px;
   width: auto;
-  max-width: 360px;
+  max-width: 280px;
   object-fit: contain;
   display: block;
   background-color: transparent;
@@ -503,8 +510,8 @@ header,
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 64px;
-  max-width: 280px;
+  height: 38px;
+  max-width: 240px;
   padding: 0;
 }
 
@@ -570,9 +577,9 @@ header,
 .navbar-nav .nav-link {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #082C4A;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 0.75rem !important;
   position: relative;
   transition: color var(--transition-fast);
 }
@@ -632,28 +639,31 @@ header,
 .navbar-mobile-actions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   margin-left: auto;
   flex-shrink: 0;
 }
 
 .navbar-mobile-actions .navbar-toggler {
   margin-left: 0 !important;
-  height: 38px;
+  height: 35px;
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 
 .btn-nav-call-mobile {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
-  padding: 0.38rem 0.75rem;
-  height: 38px;
+  gap: 0.28rem;
+  padding: 0.3rem 0.6rem;
+  height: 35px;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #FFFFFF;
   background-color: #082C4A;
@@ -3100,6 +3110,10 @@ header,
    15. Responsive Adaptations
    -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
+  .navbar-custom {
+    padding: 0.45rem 0;
+  }
+
   .navbar-custom .container {
     display: flex;
     align-items: center;
@@ -3107,21 +3121,49 @@ header,
     flex-wrap: wrap;
   }
 
+  .navbar-brand.brand-wrapper {
+    margin-right: 0.35rem !important;
+    max-width: calc(100% - 125px);
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
   .navbar-logo-img {
-    height: 76px;
-    max-width: 290px;
+    height: 34px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
     padding: 0;
   }
 
   .navbar-custom.scrolled .navbar-logo-img {
-    height: 64px;
-    max-width: 260px;
+    height: 30px;
+    max-width: 100%;
+  }
+
+  .navbar-mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
   .navbar-toggler {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    height: 35px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-nav-call-mobile {
+    height: 35px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
   }
 
   .navbar-collapse {
@@ -3161,13 +3203,15 @@ header,
 }
 
 @media (max-width: 575.98px) {
-  .brand-wrapper {
-    max-width: calc(100vw - 155px);
+  .navbar-brand.brand-wrapper {
+    margin-right: 0.25rem !important;
+    max-width: calc(100% - 118px);
+    flex-shrink: 1;
     min-width: 0;
   }
 
   .navbar-logo-img {
-    height: clamp(62px, 17vw, 72px);
+    height: clamp(28px, 8vw, 33px);
     max-width: 100%;
     width: auto;
     object-fit: contain;
@@ -3175,27 +3219,26 @@ header,
   }
 
   .navbar-custom.scrolled .navbar-logo-img {
-    height: clamp(52px, 14vw, 58px);
+    height: clamp(25px, 7vw, 29px);
     max-width: 100%;
-  }
-
-  .navbar-toggler {
-    padding: 0.35rem 0.55rem;
-    font-size: 0.9rem;
-    height: 38px;
-  }
-
-@media (max-width: 374.98px) {
-  .btn-nav-call-mobile {
-    padding: 0.35rem 0.55rem;
-    font-size: 0.8rem;
-    gap: 0.25rem;
   }
 
   .navbar-mobile-actions {
     gap: 0.35rem;
   }
-}
+
+  .navbar-toggler {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.85rem;
+    height: 34px;
+  }
+
+  .btn-nav-call-mobile {
+    padding: 0.28rem 0.52rem;
+    font-size: 0.78rem;
+    height: 34px;
+    gap: 0.25rem;
+  }
 
   .section-padding {
     padding-top: 3.25rem;
