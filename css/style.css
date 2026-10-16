@@ -458,7 +458,7 @@ header,
 }
 
 .navbar-custom {
-  padding: 0.5rem 0;
+  padding: 0.9rem 0;
   box-shadow: 0 4px 20px rgba(120, 70, 20, 0.16);
 }
 
@@ -477,7 +477,7 @@ header,
 }
 
 .navbar-custom.scrolled {
-  padding: 0.35rem 0;
+  padding: 0.5rem 0;
   box-shadow: 0 6px 26px rgba(120, 70, 20, 0.24);
 }
 
@@ -491,9 +491,9 @@ header,
 }
 
 .navbar-logo-img {
-  height: 44px;
+  height: 56px;
   width: auto;
-  max-width: 280px;
+  max-width: 350px;
   object-fit: contain;
   display: block;
   background-color: transparent;
@@ -504,14 +504,21 @@ header,
   transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
+@media (min-width: 1400px) {
+  .navbar-logo-img {
+    height: 58px;
+    max-width: 360px;
+  }
+}
+
 .brand-wrapper:hover .navbar-logo-img {
   transform: scale(1.02);
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
-  height: 38px;
-  max-width: 240px;
+  height: 46px;
+  max-width: 290px;
   padding: 0;
 }
 
@@ -3109,9 +3116,35 @@ header,
 /* --------------------------------------------------------------------------
    15. Responsive Adaptations
    -------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-custom {
+    padding: 0.75rem 0;
+  }
+
+  .navbar-logo-img {
+    height: 48px;
+    max-width: 295px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.88rem;
+    padding: 0.5rem 0.6rem !important;
+  }
+
+  .btn-nav-call {
+    font-size: 0.82rem;
+    padding: 0.48rem 0.75rem;
+  }
+
+  .navbar-custom .btn-primary-navy {
+    font-size: 0.82rem;
+    padding: 0.48rem 0.85rem;
+  }
+}
+
 @media (max-width: 991.98px) {
   .navbar-custom {
-    padding: 0.45rem 0;
+    padding: 0.7rem 0;
   }
 
   .navbar-custom .container {
@@ -3129,7 +3162,7 @@ header,
   }
 
   .navbar-logo-img {
-    height: 34px;
+    height: 42px;
     max-width: 100%;
     width: auto;
     object-fit: contain;
@@ -3138,7 +3171,7 @@ header,
   }
 
   .navbar-custom.scrolled .navbar-logo-img {
-    height: 30px;
+    height: 36px;
     max-width: 100%;
   }
 
@@ -3155,15 +3188,15 @@ header,
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    height: 35px;
+    height: 38px;
     padding: 0.25rem 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .btn-nav-call-mobile {
-    height: 35px;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
+    height: 38px;
+    padding: 0.32rem 0.65rem;
+    font-size: 0.82rem;
   }
 
   .navbar-collapse {
@@ -3203,15 +3236,19 @@ header,
 }
 
 @media (max-width: 575.98px) {
+  .navbar-custom {
+    padding: 0.65rem 0;
+  }
+
   .navbar-brand.brand-wrapper {
     margin-right: 0.25rem !important;
-    max-width: calc(100% - 118px);
+    max-width: calc(100% - 116px);
     flex-shrink: 1;
     min-width: 0;
   }
 
   .navbar-logo-img {
-    height: clamp(28px, 8vw, 33px);
+    height: clamp(33px, 9vw, 38px);
     max-width: 100%;
     width: auto;
     object-fit: contain;
@@ -3219,24 +3256,25 @@ header,
   }
 
   .navbar-custom.scrolled .navbar-logo-img {
-    height: clamp(25px, 7vw, 29px);
+    height: clamp(28px, 8vw, 32px);
     max-width: 100%;
   }
 
   .navbar-mobile-actions {
-    gap: 0.35rem;
+    gap: 0.3rem;
   }
 
   .navbar-toggler {
     padding: 0.25rem 0.45rem;
     font-size: 0.85rem;
-    height: 34px;
+    height: 35px;
+    width: 38px;
   }
 
   .btn-nav-call-mobile {
     padding: 0.28rem 0.52rem;
     font-size: 0.78rem;
-    height: 34px;
+    height: 35px;
     gap: 0.25rem;
   }
 
