@@ -1748,6 +1748,10 @@ header,
   grid-column: span 10;
 }
 
+.dept-span-8 {
+  grid-column: span 8;
+}
+
 .dept-span-7 {
   grid-column: span 7;
 }
@@ -1927,6 +1931,144 @@ header,
 
 .dept-card-cosmetic .dept-illustration {
   stroke: #053C2D;
+}
+
+/* 9. Surgical Oncology - Soft Rose / Blush */
+.dept-card-oncology {
+  background-color: #F8D3DC;
+  color: #3E101D;
+}
+
+.dept-card-oncology .dept-title {
+  color: #3E101D;
+}
+
+.dept-card-oncology .dept-conditions {
+  color: #6B1E34;
+}
+
+.dept-card-oncology .dept-link {
+  color: #3E101D;
+}
+
+.dept-card-oncology .dept-illustration {
+  stroke: #3E101D;
+}
+
+/* 10. Pediatric Surgery - Soft Warm Sunshine Buttercream */
+.dept-card-pediatric {
+  background-color: #FEDD97;
+  color: #3A2302;
+}
+
+.dept-card-pediatric .dept-title {
+  color: #3A2302;
+}
+
+.dept-card-pediatric .dept-conditions {
+  color: #633E06;
+}
+
+.dept-card-pediatric .dept-link {
+  color: #3A2302;
+}
+
+.dept-card-pediatric .dept-illustration {
+  stroke: #3A2302;
+}
+
+/* --------------------------------------------------------------------------
+   Minor OT Procedures Showcase
+   -------------------------------------------------------------------------- */
+.minor-ot-section {
+  position: relative;
+  background: linear-gradient(180deg, #F9FBFC 0%, #FFFFFF 100%);
+  border-top: 1px solid rgba(24, 48, 89, 0.06);
+  border-bottom: 1px solid rgba(24, 48, 89, 0.06);
+}
+
+.minor-ot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.minor-ot-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.minor-ot-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-navy);
+  box-shadow: 0 12px 28px rgba(24, 48, 89, 0.09);
+}
+
+.minor-ot-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(30, 86, 86, 0.08);
+  color: var(--color-teal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.minor-ot-card:hover .minor-ot-icon-badge {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.minor-ot-title {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.minor-ot-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.15rem;
+  flex-grow: 1;
+}
+
+.minor-ot-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-teal);
+  background-color: rgba(30, 86, 86, 0.07);
+  padding: 0.28rem 0.65rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.minor-ot-banner {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #102544 100%);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2.5rem;
+  color: var(--color-white);
+  margin-top: 3rem;
+  box-shadow: 0 16px 40px rgba(16, 37, 68, 0.16);
 }
 
 /* Doctor Cards */
@@ -3348,6 +3490,7 @@ header,
 
   .dept-span-12,
   .dept-span-10,
+  .dept-span-8,
   .dept-span-7 {
     grid-column: span 1;
   }
@@ -3366,6 +3509,7 @@ header,
 
   .dept-span-12,
   .dept-span-10,
+  .dept-span-8,
   .dept-span-7 {
     grid-column: span 1;
   }

@@ -394,14 +394,14 @@
                 </div>
               </div>
 
-              <!-- Floating Info Card 2: Daycare Clinical Procedures -->
+              <!-- Floating Info Card 2: Minor OT & Daycare Procedures -->
               <div class="floating-hero-card floating-card-bottom" id="floatingHeroCardBottom">
                 <div class="floating-card-icon bg-teal-subtle text-teal" aria-hidden="true">
                   <i class="bi bi-hospital"></i>
                 </div>
                 <div>
-                  <div class="floating-card-title">Daycare Procedures</div>
-                  <p class="floating-card-text">Suturing, cyst excision &amp; PRP injections</p>
+                  <div class="floating-card-title">Minor OT &amp; Daycare</div>
+                  <p class="floating-card-text">Suturing, cyst excision, lipoma &amp; abscess drainage</p>
                 </div>
               </div>
 
@@ -712,7 +712,7 @@
 
         <!-- Bento Grid Layout -->
         <div class="dept-bento-grid">
-          <!-- Row 1: 2 Equal Cards -->
+          <!-- Row 1: 2 Equal Cards (Span 12 each) -->
           <!-- 1. Proctology -->
           <div class="dept-card dept-card-proctology dept-span-12" role="region" aria-label="Proctology Department">
             <div class="dept-card-content">
@@ -747,27 +747,64 @@
             </div>
           </div>
 
-          <!-- Row 2: 3 Cards (Gastro Wide, ENT, Urology) -->
-          <!-- 3. Bariatric & Surgical Gastroenterology -->
-          <div class="dept-card dept-card-gastro dept-span-10" role="region"
-            aria-label="Bariatric and Surgical Gastroenterology">
+          <!-- Row 2: 3 Cards (Span 8 each) -->
+          <!-- 3. Surgical Gastroenterology -->
+          <div class="dept-card dept-card-gastro dept-span-8" role="region"
+            aria-label="Surgical Gastroenterology Department">
             <div class="dept-card-content">
-              <h3 class="dept-title">Bariatric &amp; Surgical<br class="d-none d-lg-inline"> Gastroenterology</h3>
-              <p class="dept-conditions">Achalasia Cardia | Liver Abscess | Chronic Pancreatitis</p>
+              <h3 class="dept-title">Surgical Gastroenterology</h3>
+              <p class="dept-conditions">Gallbladder | Pancreas | Liver Abscess | GI Surgery</p>
               <a href="#appointmentModal" class="dept-link" data-bs-toggle="modal" data-bs-target="#appointmentModal"
-                data-preselect-dept="Bariatric & Gastroenterology"
-                aria-label="Know more about Bariatric and Surgical Gastroenterology">
+                data-preselect-dept="Surgical Gastroenterology"
+                aria-label="Know more about Surgical Gastroenterology">
                 Know more <i class="bi bi-arrow-right-short fs-5"></i>
               </a>
             </div>
             <div class="dept-card-icon">
-              <img src="images/departments/gastro.png" alt="Bariatric and Gastroenterology stomach cartoon"
+              <img src="images/departments/gastro.png" alt="Surgical Gastroenterology stomach cartoon"
                 class="dept-cartoon-img" width="115" height="115" loading="lazy">
             </div>
           </div>
 
-          <!-- 4. ENT -->
-          <div class="dept-card dept-card-ent dept-span-7" role="region" aria-label="ENT Department">
+          <!-- 4. Surgical Oncology -->
+          <div class="dept-card dept-card-oncology dept-span-8" role="region"
+            aria-label="Surgical Oncology Department">
+            <div class="dept-card-content">
+              <h3 class="dept-title">Surgical Oncology</h3>
+              <p class="dept-conditions">Breast Care | Head &amp; Neck | Soft Tissue Tumors</p>
+              <a href="#appointmentModal" class="dept-link" data-bs-toggle="modal" data-bs-target="#appointmentModal"
+                data-preselect-dept="Surgical Oncology"
+                aria-label="Know more about Surgical Oncology">
+                Know more <i class="bi bi-arrow-right-short fs-5"></i>
+              </a>
+            </div>
+            <div class="dept-card-icon">
+              <img src="images/departments/oncology.png" alt="Surgical Oncology cancer care cartoon"
+                class="dept-cartoon-img" width="115" height="115" loading="lazy">
+            </div>
+          </div>
+
+          <!-- 5. Pediatric Surgery -->
+          <div class="dept-card dept-card-pediatric dept-span-8" role="region"
+            aria-label="Pediatric Surgery Department">
+            <div class="dept-card-content">
+              <h3 class="dept-title">Pediatric Surgery</h3>
+              <p class="dept-conditions">Pediatric Hernia | Hydrocele | Phimosis | Tongue Tie</p>
+              <a href="#appointmentModal" class="dept-link" data-bs-toggle="modal" data-bs-target="#appointmentModal"
+                data-preselect-dept="Pediatric Surgery"
+                aria-label="Know more about Pediatric Surgery">
+                Know more <i class="bi bi-arrow-right-short fs-5"></i>
+              </a>
+            </div>
+            <div class="dept-card-icon">
+              <img src="images/departments/pediatric.png" alt="Pediatric Surgery doctor bear cartoon"
+                class="dept-cartoon-img" width="115" height="115" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Row 3: 3 Cards (Span 8 each) -->
+          <!-- 6. ENT -->
+          <div class="dept-card dept-card-ent dept-span-8" role="region" aria-label="ENT Department">
             <div class="dept-card-content">
               <h3 class="dept-title">ENT</h3>
               <p class="dept-conditions">Otitis media | Tonsillectomy</p>
@@ -782,8 +819,8 @@
             </div>
           </div>
 
-          <!-- 5. Urology -->
-          <div class="dept-card dept-card-urology dept-span-7" role="region" aria-label="Urology Department">
+          <!-- 7. Urology -->
+          <div class="dept-card dept-card-urology dept-span-8" role="region" aria-label="Urology Department">
             <div class="dept-card-content">
               <h3 class="dept-title">Urology</h3>
               <p class="dept-conditions">Kidney Stone | Prostate Care</p>
@@ -798,9 +835,8 @@
             </div>
           </div>
 
-          <!-- Row 3: 3 Cards (Gynaecology, Orthopaedics, Plastic & Cosmetic Wide) -->
-          <!-- 6. Gynaecology -->
-          <div class="dept-card dept-card-gynaecology dept-span-7" role="region" aria-label="Gynaecology Department">
+          <!-- 8. Gynaecology -->
+          <div class="dept-card dept-card-gynaecology dept-span-8" role="region" aria-label="Gynaecology Department">
             <div class="dept-card-content">
               <h3 class="dept-title">Gynaecology</h3>
               <p class="dept-conditions">Fibroids | Ovarian Cysts | PCOD</p>
@@ -815,8 +851,9 @@
             </div>
           </div>
 
-          <!-- 7. Orthopaedics -->
-          <div class="dept-card dept-card-orthopaedics dept-span-7" role="region" aria-label="Orthopaedics Department">
+          <!-- Row 4: 2 Cards (Span 12 each) -->
+          <!-- 9. Orthopaedics -->
+          <div class="dept-card dept-card-orthopaedics dept-span-12" role="region" aria-label="Orthopaedics Department">
             <div class="dept-card-content">
               <h3 class="dept-title">Orthopaedics</h3>
               <p class="dept-conditions">Sports Injuries | Fracture Fixation</p>
@@ -831,8 +868,8 @@
             </div>
           </div>
 
-          <!-- 8. Plastic & Cosmetic Surgery -->
-          <div class="dept-card dept-card-cosmetic dept-span-10" role="region"
+          <!-- 10. Plastic & Cosmetic Surgery -->
+          <div class="dept-card dept-card-cosmetic dept-span-12" role="region"
             aria-label="Plastic and Cosmetic Surgery Department">
             <div class="dept-card-content">
               <h3 class="dept-title">Plastic &amp; Cosmetic Surgery</h3>
@@ -919,22 +956,21 @@
             </div>
           </div>
 
-          <!-- Service 3: Clinical Procedures -->
+          <!-- Service 3: Minor OT Procedures -->
           <div class="col-md-6 col-lg-4 reveal-fade-up delay-300">
             <div class="custom-card service-preview-card service-preview-highlighted">
               <div class="card-image-wrap position-relative">
                 <span class="service-badge-pill"><i class="bi bi-stars me-1"></i> Featured</span>
-                <img src="images/services/procedures.jpg" alt="Clinical Procedures at AzeeHealth" class="card-top-img"
+                <img src="images/services/procedures.jpg" alt="Minor OT Procedures at AzeeHealth" class="card-top-img"
                   width="600" height="448" loading="lazy">
                 <div class="card-icon-badge" aria-hidden="true">
                   <i class="bi bi-bandaid"></i>
                 </div>
               </div>
               <div class="card-body-content">
-                <h3 class="card-title">Clinical Procedures</h3>
+                <h3 class="card-title">Minor OT Procedures</h3>
                 <p class="card-text">
-                  Sterile minor interventions including suturing, dressing changes, cyst excisions, and joint
-                  injections.
+                  Sterile minor surgical interventions: Sebaceous &amp; dermoid cysts, lipoma, abscess drainage, corn, nail removal, suturing &amp; circumcision.
                 </p>
                 <button type="button" class="btn-icon-link border-0 bg-transparent text-start p-0"
                   data-bs-toggle="modal" data-bs-target="#serviceDetailModal" data-service-key="clinical-procedures">
@@ -1678,13 +1714,16 @@
                   <option value="Proctology">Proctology (Piles, Fistula, Fissure, Sinus)</option>
                   <option value="General & Laparoscopic Surgery">General &amp; Laparoscopic Surgery (Hernia,
                     Gallbladder)</option>
-                  <option value="Bariatric & Gastroenterology">Bariatric &amp; Surgical Gastroenterology</option>
+                  <option value="Surgical Gastroenterology">Surgical Gastroenterology</option>
+                  <option value="Surgical Oncology">Surgical Oncology</option>
+                  <option value="Pediatric Surgery">Pediatric Surgery</option>
                   <option value="ENT (Ear, Nose & Throat)">ENT (Otitis media, Tonsillectomy)</option>
                   <option value="Urology & Kidney Care">Urology &amp; Kidney Care (Kidney Stone, Prostate Care)</option>
                   <option value="Gynaecology & Women's Health">Gynaecology &amp; Women's Health</option>
                   <option value="Orthopaedics & Joint Care">Orthopaedics &amp; Joint Care (Sports Injuries, Fractures)
                   </option>
                   <option value="Plastic & Cosmetic Surgery">Plastic &amp; Cosmetic Surgery</option>
+                  <option value="Minor OT Procedures">Minor OT Procedures</option>
                   <option value="General Consultation">General Medicine &amp; Physician</option>
                   <option value="Day Care">Day Care &amp; Clinical Procedures</option>
                   <option value="Preventive Healthcare">Preventive Health Checkup</option>

@@ -389,18 +389,50 @@ document.addEventListener('DOMContentLoaded', () => {
       whyAzee: 'Precision diagnostics, physician-led result interpretation, and practical lifestyle modifications tailored to your life.'
     },
     'clinical-procedures': {
-      title: 'Clinical Procedures',
+      title: 'Minor OT & Clinical Procedures',
       icon: 'bi-bandaid',
-      tagline: 'Safe, professionally managed minor and day-care clinical procedures',
-      overview: 'Our sterile minor procedure suites are equipped for safe, day-care clinical procedures performed under strict hygiene protocols and clinical safety standards.',
+      tagline: 'Safe, professionally managed Minor OT and day-care surgical procedures',
+      overview: 'Our certified Minor OT and sterile procedural suites are fully equipped for safe, day-care clinical and minor surgical procedures performed under strict autoclave hygiene protocols, local anesthesia, and high clinical safety standards.',
       offer: [
-        'Minor surgical excisions, suturing, and wound care management',
+        'Sebaceous Cyst, Dermoid Cyst & Ganglion Cyst Excision',
+        'Corn Excision & Treatment with pressure relief management',
+        'Abscess Incision & Sterile Drainage (I&D)',
+        'Lipoma Excision & Soft-Tissue Benign Mass Removal',
+        'Partial & Complete Nail Removal (Ingrown Toenail Correction)',
+        'Trauma & Elective Wound Suturing with fine cosmetic closure',
+        'Pediatric & Adult Day-Care Circumcision',
+        'Diabetic Foot Debridement & Advanced Wound Care',
+        'Chalazion Excision & Ophthalmic Micro-Curettage',
+        'Soft Tissue Foreign Body Localization & Removal',
+        'Comprehensive Excision Procedures (Moles, skin tags, fibromas & biopsy)',
         'Joint injections, aspiration, and orthopaedic day procedures',
-        'Sterile dressing changes, abscess drainage, and biopsy sampling',
-        'Post-procedure monitoring in comfortable recovery bays'
+        'Post-procedure monitoring in comfortable day-care recovery bays'
       ],
       who: 'Patients requiring immediate or scheduled minor interventions without the delay or stress of prolonged hospital admission.',
-      whyAzee: 'NABH-aligned sterile protocols, compassionate surgical team, painless administration techniques, and rapid discharge.'
+      whyAzee: 'NABH-aligned sterile protocols, compassionate surgical team, painless local anesthesia techniques, and same-day rapid discharge.'
+    },
+    'minor-ot-procedures': {
+      title: 'Minor OT Procedures',
+      icon: 'bi-bandaid',
+      tagline: 'Safe, professionally managed Minor OT and day-care surgical procedures',
+      overview: 'Our certified Minor OT and sterile procedural suites are fully equipped for safe, day-care clinical and minor surgical procedures performed under strict autoclave hygiene protocols, local anesthesia, and high clinical safety standards.',
+      offer: [
+        'Sebaceous Cyst, Dermoid Cyst & Ganglion Cyst Excision',
+        'Corn Excision & Treatment with pressure relief management',
+        'Abscess Incision & Sterile Drainage (I&D)',
+        'Lipoma Excision & Soft-Tissue Benign Mass Removal',
+        'Partial & Complete Nail Removal (Ingrown Toenail Correction)',
+        'Trauma & Elective Wound Suturing with fine cosmetic closure',
+        'Pediatric & Adult Day-Care Circumcision',
+        'Diabetic Foot Debridement & Advanced Wound Care',
+        'Chalazion Excision & Ophthalmic Micro-Curettage',
+        'Soft Tissue Foreign Body Localization & Removal',
+        'Comprehensive Excision Procedures (Moles, skin tags, fibromas & biopsy)',
+        'Joint injections, aspiration, and orthopaedic day procedures',
+        'Post-procedure monitoring in comfortable day-care recovery bays'
+      ],
+      who: 'Patients requiring immediate or scheduled minor interventions without the delay or stress of prolonged hospital admission.',
+      whyAzee: 'NABH-aligned sterile protocols, compassionate surgical team, painless local anesthesia techniques, and same-day rapid discharge.'
     },
     'pharmacy': {
       title: 'Pharmacy Services',
