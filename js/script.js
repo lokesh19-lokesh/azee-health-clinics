@@ -1,6 +1,6 @@
 /**
  * AZEEHEALTH CLINICS - Main Interactive JavaScript
- * Precision | Care | Well Being
+ * Precision | Care | Wellness
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   const preloader = document.getElementById('pagePreloader');
   if (preloader) {
-    const minDisplayTime = 700;
+    const minDisplayTime = 250;
     const loadStart = window.performance ? window.performance.now() : Date.now();
     let isDismissed = false;
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (preloader && preloader.parentNode) {
             preloader.parentNode.removeChild(preloader);
           }
-        }, 700);
+        }, 400);
       }, delay);
     };
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dismissPreloader();
     } else {
       window.addEventListener('load', dismissPreloader, { once: true });
-      setTimeout(dismissPreloader, 950);
+      setTimeout(dismissPreloader, 500);
     }
   }
 
@@ -212,9 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------------------
-  // 7. Structured Doctors Data & Filtering
+  // 7. Structured Doctors Data & Filtering (Temporarily empty until doctor profiles are added)
   // ------------------------------------------------------------------------
   const doctorsData = [
+    /*
     {
       id: 'dr-ananya-rao',
       name: 'Dr. Ananya Rao',
@@ -267,6 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
       expertise: ['Arthritis & Joint Pain Management', 'Sports Injury Rehabilitation', 'Spine & Postural Disorders', 'Intra-articular Injections & PRP Therapy', 'Fracture & Trauma Care'],
       schedule: 'Tue, Thu, Sat: 10:00 AM – 2:00 PM | Mon, Wed, Fri: 4:00 PM – 7:30 PM'
     }
+    */
   ];
 
   // Doctors Filter Buttons Logic (on doctors.html)
@@ -350,10 +352,10 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Medical Consultation',
       icon: 'bi-clipboard2-pulse',
       tagline: 'Comprehensive primary care focused on your individual health needs',
-      overview: 'Our Medical Consultation service offers in-depth clinical evaluations by experienced physicians. We address acute illnesses, chronic lifestyle conditions, and general wellness with scientific precision and compassionate care.',
+      overview: 'Our Medical Consultation service offers in-depth clinical evaluations by experienced physicians. We address common illnesses, chronic lifestyle conditions, and general wellness with scientific precision and compassionate care.',
       offer: [
         'Detailed medical history review and head-to-toe physical examination',
-        'Diagnosis and evidence-based management of acute and chronic health conditions',
+        'Diagnosis and evidence-based management of common and chronic health conditions',
         'Preventive health counseling and cardiovascular risk profiling',
         'Personalized health roadmaps and prescription optimization'
       ],
@@ -452,14 +454,14 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Day Care Services',
       icon: 'bi-hospital',
       tagline: 'Restorative clinical observation and day procedures in comfort',
-      overview: 'AzeeHealth Day Care provides comfortable, observation suites equipped with electronic vital monitoring and dedicated nursing care for short-stay treatments.',
+      overview: 'AzeeHealth Day Care provides comfortable observation suites equipped with regular vital monitoring and dedicated nursing care for short-stay treatments.',
       offer: [
         'Intravenous fluid infusions, antibiotic administration, and pain therapies',
         'Post-procedural recovery in quiet, ergonomic patient bays',
-        'Continuous vital sign telemetry and dedicated nurse assistance',
+        'Regular vital sign monitoring and dedicated nurse assistance',
         'Same-day discharge with clear recovery protocols'
       ],
-      who: 'Patients needing intravenous therapy, post-minor procedure recovery, or medical observation during acute illness.',
+      who: 'Patients needing intravenous therapy, post-minor procedure recovery, or short-stay clinical observation.',
       whyAzee: 'Tranquil boutique ambiance, high nurse-to-patient ratio, attentive clinical monitoring, and no overnight hospital stay required.'
     },
     'health-checkups': {

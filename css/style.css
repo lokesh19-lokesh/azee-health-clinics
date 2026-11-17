@@ -1,27 +1,31 @@
 /* ==========================================================================
    AZEEHEALTH CLINICS - Global Design System & Stylesheet
-   Precision | Care | Well Being
+   Precision | Care | Wellness
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. CSS Custom Properties / Design Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Brand Color Palette */
-  --color-primary-navy: #0B3B63;
+  /* Brand Color Palette — Sage Green & Royal Blue */
+  --color-primary-navy: #0B4678;
+  --color-navy: #0B4678;
   --color-secondary-blue: #145A8D;
   --color-dark-navy: #082C4A;
-  --color-sage-green: #6B7655;
-  --color-light-sage: #DDE4D5;
+  --color-sage-green: #5E7D41;
+  --color-forest-green: #5E7D41;
+  --color-teal: #5E7D41;
+  --color-light-sage: #DCE6D5;
   --color-sage-bg: #EEF3EA;
-  --color-warm-white: #F7F5EF;
+  --color-warm-white: #F4F7F2;
   --color-white: #FFFFFF;
   --color-dark-text: #1E2933;
   --color-muted-text: #64748B;
+  --color-text-muted: #64748B;
   --color-border: #E2E8F0;
   --color-border-subtle: #EDF2F7;
-  --color-accent-gold: #C7A86B;
-  --color-accent-gold-light: #FBF6EA;
+  --color-accent-gold: #5E7D41;
+  --color-accent-gold-light: #EEF3EA;
   --color-success: #2E7D32;
   --color-danger: #D32F2F;
 
@@ -53,6 +57,7 @@
   --transition-fast: 0.15s ease-in-out;
   --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -184,6 +189,7 @@ img {
 
 .bg-light-sage {
   background-color: var(--color-light-sage) !important;
+  color: var(--color-dark-navy) !important;
 }
 
 .bg-sage-subtle {
@@ -200,20 +206,27 @@ img {
   color: var(--color-white);
 }
 
-.text-navy {
+.text-navy,
+.text-primary-navy {
   color: var(--color-primary-navy) !important;
 }
 
-.text-navy-dark {
+.text-navy-dark,
+.text-dark-navy {
   color: var(--color-dark-navy) !important;
 }
 
-.text-blue-secondary {
+.text-blue-secondary,
+.text-secondary-blue {
   color: var(--color-secondary-blue) !important;
 }
 
 .text-sage {
   color: var(--color-sage-green) !important;
+}
+
+.text-light-sage {
+  color: var(--color-light-sage) !important;
 }
 
 .text-gold {
@@ -367,16 +380,16 @@ img {
 }
 
 .btn-gold {
-  background-color: var(--color-accent-gold);
-  color: var(--color-dark-navy);
-  border-color: var(--color-accent-gold);
+  background-color: var(--color-sage-green);
+  color: var(--color-white);
+  border-color: var(--color-sage-green);
   font-weight: 700;
 }
 
 .btn-gold:hover {
-  background-color: #B89759;
-  border-color: #B89759;
-  color: var(--color-dark-navy);
+  background-color: #4D6834;
+  border-color: #4D6834;
+  color: var(--color-white);
   transform: translateY(-2px);
 }
 
@@ -411,7 +424,7 @@ img {
    5. Header & Navigation
    -------------------------------------------------------------------------- */
 .top-bar {
-  background-color: #B27432;
+  background-color: var(--color-primary-navy);
   color: rgba(255, 255, 255, 0.95);
   font-size: 0.825rem;
   padding: 0.45rem 0;
@@ -459,7 +472,7 @@ header,
 
 .navbar-custom {
   padding: 0.65rem 0;
-  box-shadow: 0 4px 20px rgba(120, 70, 20, 0.16);
+  box-shadow: 0 4px 20px rgba(11, 70, 120, 0.08);
 }
 
 .navbar-custom .container {
@@ -478,7 +491,7 @@ header,
 
 .navbar-custom.scrolled {
   padding: 0.45rem 0;
-  box-shadow: 0 6px 26px rgba(120, 70, 20, 0.24);
+  box-shadow: 0 6px 26px rgba(11, 70, 120, 0.12);
 }
 
 /* Brand Wordmark & Logo */
@@ -501,7 +514,7 @@ header,
   border-radius: 0;
   box-shadow: none;
   border: none;
-  transition: transform var(--transition-fast), filter var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 @media (min-width: 1400px) {
@@ -512,8 +525,8 @@ header,
 }
 
 .brand-wrapper:hover .navbar-logo-img {
-  transform: scale(1.02);
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+  transform: scale(1.01);
+  filter: none;
 }
 
 .navbar-custom.scrolled .navbar-logo-img {
@@ -1435,10 +1448,10 @@ header,
 }
 
 .custom-card:hover .card-icon-badge {
-  background-color: #082C4A;
-  color: #D99A53;
+  background-color: var(--color-primary-navy);
+  color: var(--color-light-sage);
   transform: scale(1.06);
-  box-shadow: 0 6px 18px rgba(8, 44, 74, 0.25);
+  box-shadow: 0 6px 18px rgba(11, 70, 120, 0.25);
 }
 
 .card-body-content {
@@ -1466,7 +1479,7 @@ header,
 }
 
 .quick-service-card:hover::after {
-  background-color: #D99A53;
+  background-color: var(--color-sage-green);
 }
 
 .card-icon-box {
@@ -1598,10 +1611,10 @@ header,
 }
 
 .why-card:hover .why-icon-badge {
-  background-color: #082C4A;
-  color: #D99A53;
+  background-color: var(--color-primary-navy);
+  color: var(--color-light-sage);
   transform: scale(1.06);
-  box-shadow: 0 6px 18px rgba(8, 44, 74, 0.25);
+  box-shadow: 0 6px 18px rgba(11, 70, 120, 0.25);
 }
 
 .why-card-content {
@@ -1823,26 +1836,26 @@ header,
   stroke: #0C2849;
 }
 
-/* 4. ENT - Soft Warm Terracotta Peach */
+/* 4. ENT - Soft Sage Mist */
 .dept-card-ent {
-  background-color: #EFA277;
-  color: #3C1204;
+  background-color: #D4E4CF;
+  color: #1A3A14;
 }
 
 .dept-card-ent .dept-title {
-  color: #3C1204;
+  color: #1A3A14;
 }
 
 .dept-card-ent .dept-conditions {
-  color: #6D2B0E;
+  color: #2E5726;
 }
 
 .dept-card-ent .dept-link {
-  color: #3C1204;
+  color: #1A3A14;
 }
 
 .dept-card-ent .dept-illustration {
-  stroke: #3C1204;
+  stroke: #1A3A14;
 }
 
 /* 5. Urology - Soft Cyan/Teal Blue */
@@ -1889,26 +1902,26 @@ header,
   stroke: #053E2F;
 }
 
-/* 7. Orthopaedics - Soft Warm Sunny Gold */
+/* 7. Orthopaedics - Soft Sage Green */
 .dept-card-orthopaedics {
-  background-color: #EED46B;
-  color: #3B2103;
+  background-color: #C5DBBA;
+  color: #1D3A14;
 }
 
 .dept-card-orthopaedics .dept-title {
-  color: #3B2103;
+  color: #1D3A14;
 }
 
 .dept-card-orthopaedics .dept-conditions {
-  color: #69410A;
+  color: #2E5722;
 }
 
 .dept-card-orthopaedics .dept-link {
-  color: #3B2103;
+  color: #1D3A14;
 }
 
 .dept-card-orthopaedics .dept-illustration {
-  stroke: #3B2103;
+  stroke: #1D3A14;
 }
 
 /* 8. Plastic & Cosmetic Surgery - Soft Seafoam Sage */
@@ -1955,26 +1968,26 @@ header,
   stroke: #3E101D;
 }
 
-/* 10. Pediatric Surgery - Soft Warm Sunshine Buttercream */
+/* 10. Pediatric Surgery - Soft Royal Sky Blue */
 .dept-card-pediatric {
-  background-color: #FEDD97;
-  color: #3A2302;
+  background-color: #D2E3F7;
+  color: #0B355E;
 }
 
 .dept-card-pediatric .dept-title {
-  color: #3A2302;
+  color: #0B355E;
 }
 
 .dept-card-pediatric .dept-conditions {
-  color: #633E06;
+  color: #164C82;
 }
 
 .dept-card-pediatric .dept-link {
-  color: #3A2302;
+  color: #0B355E;
 }
 
 .dept-card-pediatric .dept-illustration {
-  stroke: #3A2302;
+  stroke: #0B355E;
 }
 
 /* --------------------------------------------------------------------------
@@ -2062,13 +2075,42 @@ header,
   width: fit-content;
 }
 
+.bg-gold {
+  background-color: var(--color-sage-green) !important;
+  color: #FFFFFF !important;
+}
+
 .minor-ot-banner {
-  background: linear-gradient(135deg, var(--color-navy) 0%, #102544 100%);
+  background-color: #0B4678;
+  background: linear-gradient(135deg, #0B4678 0%, #082C4A 100%);
   border-radius: var(--radius-xl);
   padding: 2.25rem 2.5rem;
   color: var(--color-white);
   margin-top: 3rem;
-  box-shadow: 0 16px 40px rgba(16, 37, 68, 0.16);
+  box-shadow: 0 16px 40px rgba(11, 70, 120, 0.2);
+}
+
+.minor-ot-banner h3,
+.minor-ot-banner .h3 {
+  color: #FFFFFF !important;
+}
+
+.minor-ot-banner p,
+.minor-ot-banner .text-white-50 {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+@media (max-width: 767.98px) {
+  .minor-ot-banner {
+    padding: 1.5rem 1.25rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .minor-ot-banner .btn-lg {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Doctor Cards */
@@ -2219,7 +2261,7 @@ header,
 }
 
 .service-highlight-badge i {
-  color: #D99A53;
+  color: var(--color-light-sage);
 }
 
 .service-preview-highlighted {
@@ -2246,7 +2288,7 @@ header,
 }
 
 .service-badge-pill i {
-  color: #D99A53;
+  color: var(--color-light-sage);
 }
 
 .service-benefit-list {
@@ -2652,18 +2694,18 @@ header,
    12. Footer
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #D99A53;
-  color: #082C4A;
+  background-color: var(--color-light-sage);
+  color: var(--color-dark-navy);
   font-size: 0.925rem;
   padding-top: 5rem;
   padding-bottom: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 2px solid rgba(94, 125, 65, 0.25);
 }
 
 .site-footer p,
 .site-footer .text-white-50,
 .site-footer .footer-clinic-desc {
-  color: #082C4A !important;
+  color: var(--color-dark-navy) !important;
   opacity: 0.92;
   font-weight: 500;
 }
@@ -2672,7 +2714,7 @@ header,
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.05rem;
-  color: #082C4A;
+  color: var(--color-primary-navy);
   margin-bottom: 1.35rem;
   letter-spacing: -0.01em;
 }
@@ -2688,7 +2730,7 @@ header,
 }
 
 .footer-links a {
-  color: #082C4A;
+  color: var(--color-dark-navy);
   font-weight: 600;
   transition: all var(--transition-fast);
   display: inline-flex;
@@ -2697,17 +2739,17 @@ header,
 }
 
 .footer-links a:hover {
-  color: #051B2E;
+  color: var(--color-primary-navy);
   transform: translateX(3px);
 }
 
 .footer-links a i {
-  color: #082C4A;
-  opacity: 0.75;
+  color: var(--color-sage-green);
+  opacity: 0.9;
 }
 
 .footer-contact-item {
-  color: #082C4A;
+  color: var(--color-dark-navy);
   font-weight: 500;
   display: flex;
   align-items: flex-start;
@@ -2716,8 +2758,19 @@ header,
   line-height: 1.5;
 }
 
+.footer-contact-item a,
+.footer-contact-item a.text-white {
+  color: var(--color-primary-navy) !important;
+  font-weight: 600;
+}
+
+.footer-contact-item a:hover,
+.footer-contact-item a.text-white:hover {
+  color: var(--color-sage-green) !important;
+}
+
 .footer-contact-item i {
-  color: #082C4A;
+  color: var(--color-sage-green);
   font-size: 1.1rem;
   margin-top: 2px;
   flex-shrink: 0;
@@ -2733,20 +2786,20 @@ header,
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: rgba(8, 44, 74, 0.1);
-  color: #082C4A;
+  background-color: rgba(11, 70, 120, 0.1);
+  color: var(--color-primary-navy);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   transition: all var(--transition-fast);
-  border: 1px solid rgba(8, 44, 74, 0.2);
+  border: 1px solid rgba(11, 70, 120, 0.22);
 }
 
 .footer-social-btn:hover {
-  background-color: #082C4A;
+  background-color: var(--color-primary-navy);
   color: #FFFFFF;
-  border-color: #082C4A;
+  border-color: var(--color-primary-navy);
   transform: translateY(-2px);
 }
 
@@ -2756,16 +2809,16 @@ header,
 .footer-bottom {
   margin-top: 3.5rem;
   padding: 1.25rem 1.75rem;
-  background: #082C4A;
+  background: var(--color-primary-navy);
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px rgba(8, 44, 74, 0.25);
+  box-shadow: 0 8px 24px rgba(11, 70, 120, 0.22);
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-bottom a {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -2799,12 +2852,12 @@ header,
 .bubbles-media-text {
   position: relative;
   z-index: 2;
-  background: linear-gradient(90deg, #FFFFFF 0%, #DDE4D5 45%, #C7A86B 100%);
+  background: linear-gradient(90deg, #FFFFFF 0%, #DCE6D5 50%, #9BC07B 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all var(--transition-fast);
-  border-bottom: 1.5px dotted rgba(199, 168, 107, 0.65);
+  border-bottom: 1.5px dotted rgba(220, 230, 213, 0.75);
 }
 
 .bubbles-media-link:hover .bubbles-media-text {
@@ -3080,19 +3133,19 @@ header,
 
 /* Book Appointment Floating Button */
 .floating-book-btn {
-  background: linear-gradient(135deg, #C7A86B 0%, #B89758 50%, #9E7D3E 100%);
-  color: #082C4A;
+  background: linear-gradient(135deg, #6B8E4E 0%, #5E7D41 50%, #4C6834 100%);
+  color: #FFFFFF;
   border: 1.5px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 8px 24px rgba(199, 168, 107, 0.42);
+  box-shadow: 0 8px 24px rgba(94, 125, 65, 0.42);
   outline: none;
   padding: 0;
 }
 
 .floating-book-btn:hover,
 .floating-book-btn:focus-visible {
-  background: linear-gradient(135deg, #E2BC43 0%, #D4AF37 50%, #B89758 100%);
-  color: #082C4A;
-  box-shadow: 0 12px 30px rgba(199, 168, 107, 0.6);
+  background: linear-gradient(135deg, #7B9F5C 0%, #688949 50%, #55733A 100%);
+  color: #FFFFFF;
+  box-shadow: 0 12px 30px rgba(94, 125, 65, 0.6);
   transform: scale(1.08) translateY(-2px);
 }
 
@@ -3344,12 +3397,12 @@ header,
   .navbar-collapse {
     flex-basis: 100%;
     width: 100%;
-    background-color: #C98942;
+    background-color: #FFFFFF;
     padding: 1.25rem;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--color-border);
     margin-top: 0.75rem;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 32px rgba(11, 70, 120, 0.14);
   }
 
   .nav-actions {
@@ -3357,7 +3410,7 @@ header,
     align-items: stretch;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--color-border);
   }
 
   .floating-hero-card {
@@ -3543,9 +3596,15 @@ header,
   }
 
   .floating-contact-actions {
-    bottom: 74px;
+    bottom: 72px;
     right: 14px;
     gap: 10px;
+  }
+
+  /* Hide redundant floating Call & Book buttons on mobile since sticky bottom bar already provides Call Clinic & Book Now */
+  .floating-contact-actions .floating-book-btn,
+  .floating-contact-actions .floating-call-btn {
+    display: none !important;
   }
 
   .floating-btn {
@@ -3559,12 +3618,17 @@ header,
   }
 
   .back-to-top-btn {
-    bottom: 256px;
+    bottom: 132px;
     right: 18px;
     width: 40px;
     height: 40px;
     font-size: 1rem;
     box-shadow: 0 4px 14px rgba(8, 44, 74, 0.22);
+  }
+
+  .cta-banner .btn-lg {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -3589,20 +3653,20 @@ header,
   }
 
   .floating-contact-actions {
-    bottom: 72px;
+    bottom: 70px;
     right: 12px;
     gap: 8px;
   }
 
   .floating-btn {
-    width: 44px;
-    height: 44px;
-    font-size: 1.2rem;
+    width: 46px;
+    height: 46px;
+    font-size: 1.25rem;
   }
 
   .back-to-top-btn {
-    bottom: 238px;
-    right: 15px;
+    bottom: 126px;
+    right: 17px;
     width: 36px;
     height: 36px;
     font-size: 0.92rem;
@@ -3817,7 +3881,7 @@ body.has-gsap .reveal-fade-up {
   max-width: 380px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(8, 44, 74, 0.18));
+  filter: none;
 }
 
 @keyframes preloaderLogoPulse {
@@ -3825,12 +3889,12 @@ body.has-gsap .reveal-fade-up {
   0%,
   100% {
     transform: scale(1);
-    filter: drop-shadow(0 4px 12px rgba(8, 44, 74, 0.18));
+    filter: none;
   }
 
   50% {
-    transform: scale(1.03);
-    filter: drop-shadow(0 8px 20px rgba(8, 44, 74, 0.28));
+    transform: scale(1.02);
+    filter: none;
   }
 }
 
@@ -4034,16 +4098,16 @@ body.has-gsap .reveal-fade-up {
 }
 
 .blog-category-btn:hover {
-  border-color: #1C4D38;
-  color: #1C4D38;
+  border-color: var(--color-primary-navy);
+  color: var(--color-primary-navy);
   background-color: #FFFFFF;
 }
 
 .blog-category-btn.active {
-  background: linear-gradient(135deg, #1C4D38 0%, #256348 100%);
+  background: linear-gradient(135deg, var(--color-primary-navy) 0%, var(--color-secondary-blue) 100%);
   color: #FFFFFF;
-  border-color: #1C4D38;
-  box-shadow: 0 4px 14px rgba(28, 77, 56, 0.28);
+  border-color: var(--color-primary-navy);
+  box-shadow: 0 4px 14px rgba(11, 70, 120, 0.25);
 }
 
 .blog-search-wrap {
@@ -4072,9 +4136,9 @@ body.has-gsap .reveal-fade-up {
 
 .blog-search-input:focus {
   background-color: #FFFFFF;
-  border-color: #1C4D38;
+  border-color: var(--color-primary-navy);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(28, 77, 56, 0.15);
+  box-shadow: 0 0 0 3px rgba(11, 70, 120, 0.15);
 }
 
 /* Featured Blog Hero Card */
@@ -4115,7 +4179,7 @@ body.has-gsap .reveal-fade-up {
   position: absolute;
   top: 18px;
   left: 18px;
-  background: linear-gradient(135deg, #1C4D38 0%, #256348 100%);
+  background: linear-gradient(135deg, var(--color-primary-navy) 0%, var(--color-secondary-blue) 100%);
   color: #FFFFFF;
   font-size: 0.75rem;
   font-weight: 700;
@@ -4149,7 +4213,7 @@ body.has-gsap .reveal-fade-up {
 
 .blog-category-tag {
   background-color: var(--color-sage-bg);
-  color: #1C4D38;
+  color: var(--color-sage-green);
   font-weight: 700;
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
@@ -4172,7 +4236,7 @@ body.has-gsap .reveal-fade-up {
 }
 
 .blog-featured-title a:hover {
-  color: #1C4D38;
+  color: var(--color-primary-navy);
 }
 
 .blog-featured-excerpt {
@@ -4261,12 +4325,12 @@ body.has-gsap .reveal-fade-up {
   left: 14px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(6px);
-  color: #1C4D38;
+  color: var(--color-primary-navy);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(28, 77, 56, 0.2);
+  border: 1px solid rgba(11, 70, 120, 0.2);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -4293,7 +4357,7 @@ body.has-gsap .reveal-fade-up {
 }
 
 .blog-card-title a:hover {
-  color: #1C4D38;
+  color: var(--color-primary-navy);
 }
 
 .blog-card-excerpt {
@@ -4316,7 +4380,7 @@ body.has-gsap .reveal-fade-up {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
-  color: #1C4D38;
+  color: var(--color-primary-navy);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -4330,19 +4394,19 @@ body.has-gsap .reveal-fade-up {
 
 .blog-read-btn:hover {
   gap: 0.6rem;
-  color: var(--color-dark-navy);
+  color: var(--color-sage-green);
 }
 
 /* Newsletter Subscription Banner */
 .blog-newsletter-section {
-  background: linear-gradient(135deg, #143828 0%, #1C4D38 60%, #256348 100%);
+  background: linear-gradient(135deg, #082C4A 0%, #0B4678 60%, #145A8D 100%);
   border-radius: var(--radius-xl);
   padding: 3.5rem 2.5rem;
   color: #FFFFFF;
   margin-top: 4.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(20, 56, 40, 0.3);
+  box-shadow: 0 20px 50px rgba(11, 70, 120, 0.25);
 }
 
 .blog-newsletter-section::before {
@@ -4353,7 +4417,7 @@ body.has-gsap .reveal-fade-up {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(199, 168, 107, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(94, 125, 65, 0.28) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -4361,11 +4425,12 @@ body.has-gsap .reveal-fade-up {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 2rem;
+  color: #FFFFFF !important;
   margin-bottom: 0.75rem;
 }
 
 .blog-newsletter-subtitle {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
   max-width: 540px;
@@ -4389,8 +4454,8 @@ body.has-gsap .reveal-fade-up {
 
 .blog-newsletter-input:focus {
   background: #FFFFFF;
-  border-color: var(--color-accent-gold);
-  box-shadow: 0 0 0 3px rgba(199, 168, 107, 0.4);
+  border-color: var(--color-sage-green);
+  box-shadow: 0 0 0 3px rgba(94, 125, 65, 0.4);
 }
 
 /* Article Reader Modal */
@@ -4416,7 +4481,7 @@ body.has-gsap .reveal-fade-up {
 
 .blog-takeaway-box {
   background-color: var(--color-warm-white);
-  border-left: 4px solid #1C4D38;
+  border-left: 4px solid var(--color-sage-green);
   padding: 1.25rem 1.5rem;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   margin: 1.5rem 0;
@@ -4426,7 +4491,7 @@ body.has-gsap .reveal-fade-up {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1rem;
-  color: #1C4D38;
+  color: var(--color-primary-navy);
   margin-bottom: 0.5rem;
 }
 
